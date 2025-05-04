@@ -1,1 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cardiac Pacemakers Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1, h2 {
+            color: #004080;
+        }
+        .section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        ul {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cardiac Pacemakers: Design, Functionality, and Safety Standards in Biomedical Engineering</h1>
+
+    <div class="section">
+        <h2>1. Evolution and Types of Pacemakers</h2>
+        <p><strong>Evolution:</strong> Pacemakers have evolved from bulky external devices in the 1950s to today’s compact, implantable, battery-powered systems. Technological advancements have led to longer battery life, improved reliability, and intelligent software-based pacing.</p>
+        
+        <p><strong>a) Single-Chamber Pacemaker:</strong></p>
+        <ul>
+            <li>Sends impulses to either the right atrium or right ventricle.</li>
+            <li>Used in atrial fibrillation with slow ventricular response.</li>
+            <li>Advantages: Simple, fewer leads, lower risk.</li>
+        </ul>
+
+        <p><strong>b) Dual-Chamber Pacemaker:</strong></p>
+        <ul>
+            <li>Stimulates both right atrium and ventricle.</li>
+            <li>Used in AV block or sinus node dysfunction.</li>
+            <li>Advantages: Better synchronization and cardiac output.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>2. Electrical Safety in Pacemaker Use</h2>
+        <ul>
+            <li><strong>Lead Insulation:</strong> Prevents current leakage, ensures targeted delivery.</li>
+            <li><strong>Overvoltage Protection:</strong> Guards against EMI (e.g., MRI machines).</li>
+            <li><strong>Battery Safety:</strong> Reliable lithium-iodine batteries (7–10 years lifespan).</li>
+            <li><strong>Fail-Safe Modes:</strong> Safe operation during malfunction.</li>
+            <li><strong>Electrical Isolation:</strong> Maintains patient safety during surgery.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>3. Regulatory and Safety Standards</h2>
+        <ul>
+            <li><strong>FDA:</strong> Oversees approval, quality control, and surveillance in the U.S.</li>
+            <li><strong>ISO 14708-1:</strong> General safety for implantable devices.</li>
+            <li><strong>IEC 60601-1:</strong> Ensures electrical safety for medical equipment.</li>
+            <li><strong>CE Marking:</strong> EU standard compliance.</li>
+            <li><strong>Design Controls:</strong> Risk analysis, software validation, biocompatibility (ISO 10993).</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>4. Safety Testing and Validation</h2>
+        <ul>
+            <li><strong>Bench Testing:</strong> Checks output, leads, and battery life.</li>
+            <li><strong>Biocompatibility:</strong> Confirms safe interaction with body tissues.</li>
+            <li><strong>EMC Testing:</strong> Evaluates resistance to interference.</li>
+            <li><strong>Clinical Trials:</strong> Assess safety and performance in real patients.</li>
+            <li><strong>Accelerated Aging:</strong> Simulates long-term wear.</li>
+            <li><strong>Validation:</strong> Software simulation, redundancy checks, traceable documentation.</li>
+        </ul>
+    </div>
+</body>
+</html>
 
