@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Biomedical Instrumentation Project</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      padding: 20px;
+    }
+    .section {
+      background-color: white;
+      border-left: 6px solid brown;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: brown;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="section">
+    <h2>Objective</h2>
+    <p>
+      To build a low-cost, real-time body monitoring system using an ESP32 Dev Board, 
+      a DS18B20 sensor for temperature, and a capacitive moisture sensor for hydration. 
+      Data is shown on an OLED display and sent to a mobile device via the Blynk IoT app.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Key Components</h2>
+    <ul>
+      <li><strong>Hardware:</strong> ESP32, DS18B20, OLED Display, Breadboard, Jumper wires</li>
+      <li><strong>Software:</strong> Arduino IDE, Blynk App</li>
+      <li><strong>Libraries:</strong> OneWire, DallasTemperature, Adafruit SSD1306, Adafruit GFX, Blynk</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Working</h2>
+    <p>
+      ESP32 reads temperature and moisture data, displays them on the OLED, 
+      and sends the data to the Blynk app over Wi-Fi.
+    </p>
+  </div>
+
+</body>
+</html>
