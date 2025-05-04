@@ -294,30 +294,32 @@ a:hover {
 .project-card a:hover {
   color: #1e40af; /* Tailwind's blue-800 */
 }
-/* certificate/certificate-style.css */
+
+/* General layout */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f0f4f8;
     margin: 0;
     padding: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    height: 100vh;
 }
 
+/* Box container */
 .certificate-box {
-    background-color: #ffffff;
+    background-color: #fff;
     border: 2px solid #004080;
     padding: 30px 40px;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     width: 90%;
     max-width: 600px;
-    margin-top: 50px;
+    text-align: center;
 }
 
+/* Title */
 .certificate-title {
     font-size: 28px;
     font-weight: bold;
@@ -325,9 +327,24 @@ body {
     margin-bottom: 20px;
 }
 
+/* View Details link */
+.view-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #004080;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.view-link:hover {
+    color: #0059b3;
+}
+
+/* Footer */
 .footer {
     font-weight: bold;
     margin-top: 30px;
     color: #004080;
 }
-
