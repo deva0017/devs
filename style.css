@@ -241,3 +241,57 @@ a:hover {
     width: auto;
   }
 }
+
+/* Style the section title */
+.project-title {
+  color: #8B0000; /* Dark red */
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 24px;
+}
+
+/* Style the project card */
+.project-card {
+  background-color: #f0f4ff;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+/* Add hover effect */
+.project-card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Project heading */
+.project-card h2 {
+  font-size: 24px;
+  color: #1d4ed8; /* Tailwind's blue-700 */
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* Project paragraph */
+.project-card p {
+  font-size: 16px;
+  color: #374151; /* Tailwind's gray-700 */
+  line-height: 1.6;
+}
+
+/* Link styling */
+.project-card a {
+  color: #2563eb; /* Tailwind's blue-600 */
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.project-card a:hover {
+  color: #1e40af; /* Tailwind's blue-800 */
+}
+
