@@ -1,58 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Biomedical Instrumentation Project</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
-      padding: 20px;
-    }
-    .section {
-      background-color: white;
-      border-left: 6px solid brown;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-    h2 {
-      color: brown;
-    }
-    ul {
-      padding-left: 20px;
-    }
-  </style>
-</head>
-<body>
-
-  <div class="section">
-    <h2>Objective</h2>
-    <p>
-      To build a low-cost, real-time body monitoring system using an ESP32 Dev Board, 
-      a DS18B20 sensor for temperature, and a capacitive moisture sensor for hydration. 
-      Data is shown on an OLED display and sent to a mobile device via the Blynk IoT app.
-    </p>
+  </section>
+  <section id="project">
+  <h2>Mini Project – Hydration and Temperature Detector</h2>
+  <div class="container">
+    <div class="project-description">
+      <p><strong>Objective:</strong> To design and implement a low-cost, real-time body monitoring system using the ESP32 Dev Board that accurately measures body temperature using a DS18B20 sensor and estimates hydration levels via a capacitive moisture sensor. The data is visualized on a compact OLED display, enhancing personal health tracking and biomedical research.</p>
+      <h3>Components Used:</h3>
+      <ul>
+        <li><strong>Hardware:</strong> ESP32 Dev Board, DS18B20 Temperature Sensor, Capacitive Moisture Sensor, 0.96” OLED Display, Breadboard, Jumper Wires</li>
+        <li><strong>Software:</strong> Arduino IDE, Blynk IoT App</li>
+        <li><strong>Libraries:</strong> OneWire, DallasTemperature, Adafruit SSD1306, Adafruit GFX, Blynk</li>
+      </ul>
+      <h3>Abstract:</h3>
+      <p>This system continuously monitors body temperature and hydration. The DS18B20 sensor transmits temperature data via 1-Wire protocol, while the moisture sensor provides analog voltage based on skin hydration. All readings are displayed on an OLED screen and sent to the Blynk mobile app through ESP32's Wi-Fi connectivity.</p>
+      <h3>Working Principle:</h3>
+      <ul>
+        <li>The ESP32 reads sensor data and displays it on the OLED using I2C.</li>
+        <li>Temperature is detected using the DS18B20 sensor with a 4.7kΩ pull-up resistor.</li>
+        <li>Hydration levels are derived from analog signals from the capacitive moisture sensor.</li>
+        <li>Data is simultaneously sent to the Blynk app for mobile access.</li>
+      </ul>
+      <h3>Applications:</h3>
+      <ul>
+        <li>Personal health monitoring</li>
+        <li>Fitness tracking</li>
+        <li>Biomedical research</li>
+      </ul>
+    </div>
   </div>
-
-  <div class="section">
-    <h2>Key Components</h2>
-    <ul>
-      <li><strong>Hardware:</strong> ESP32, DS18B20, OLED Display, Breadboard, Jumper wires</li>
-      <li><strong>Software:</strong> Arduino IDE, Blynk App</li>
-      <li><strong>Libraries:</strong> OneWire, DallasTemperature, Adafruit SSD1306, Adafruit GFX, Blynk</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Working</h2>
-    <p>
-      ESP32 reads temperature and moisture data, displays them on the OLED, 
-      and sends the data to the Blynk app over Wi-Fi.
-    </p>
-  </div>
-
-</body>
-</html>
+</section>
