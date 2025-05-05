@@ -4,12 +4,71 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Devaganesh's Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body Styling */
+    body {
+      background-color: #000; /* Black background */
+      color: #fff; /* White text */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      padding: 40px;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      background-color: #111;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 170, 255, 0.2);
+    }
+
+    /* Titles and Headings */
+    h2 {
+      color: #00aaff; /* Blue subtitle */
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      color: #00aaff; /* Blue subheadings */
+      margin-top: 20px;
+    }
+
+    p, li {
+      color: #fff;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-top: 10px;
+    }
+
+    strong {
+      color: #ffffff;
+    }
+
+    /* Optional: Add hover effect for polish */
+    li:hover {
+      color: #00ccff;
+    }
+  </style>
 </head>
 <body>
+
   <!-- Project Section -->
   <section id="project">
-    <h2 class="main-title">Mini Project – Hydration and Temperature Detector</h2>
+    <h2>Mini Project – Hydration and Temperature Detector</h2>
     <div class="container">
       <div class="project-description">
         <p><strong>Objective:</strong> To design and implement a low-cost, real-time body monitoring system using the ESP32 Dev Board that accurately measures body temperature using a DS18B20 sensor and estimates hydration levels via a capacitive moisture sensor. The data is visualized on a compact OLED display, enhancing personal health tracking and biomedical research.</p>
@@ -23,20 +82,6 @@
 
         <h3>Abstract:</h3>
         <p>This system continuously monitors body temperature and hydration. The DS18B20 sensor transmits temperature data via 1-Wire protocol, while the moisture sensor provides analog voltage based on skin hydration. All readings are displayed on an OLED screen and sent to the Blynk mobile app through ESP32's Wi-Fi connectivity.</p>
-
-        <div class="image-gallery">
-          <h1 class="section-heading">Cardiac Pacemakers Overview</h1>
-
-          <div class="image-section">
-            <h2>Single-Chamber Pacemaker</h2>
-            <img src="images/bmi images.png" alt="Single-Chamber Pacemaker Infographic" />
-          </div>
-
-          <div class="image-section">
-            <h2>Dual-Chamber Pacemaker</h2>
-            <img src="images/bmi images (2).png" alt="Dual-Chamber Pacemaker Infographic" />
-          </div>
-        </div>
 
         <h3>Working Principle:</h3>
         <ul>
@@ -55,5 +100,6 @@
       </div>
     </div>
   </section>
+
 </body>
 </html>
