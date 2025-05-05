@@ -5,23 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Devaganesh's Portfolio</title>
   <style>
-    /* Reset */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    /* Body Styling */
     body {
-      background-color: #000; /* Black background */
-      color: #fff; /* White text */
+      background-color: #000;
+      color: #fff;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       line-height: 1.6;
       padding: 40px;
     }
 
-    /* Container */
     .container {
       max-width: 1000px;
       margin: auto;
@@ -31,14 +28,14 @@
       box-shadow: 0 0 15px rgba(0, 170, 255, 0.2);
     }
 
-    /* Gradient Heading */
     h2 {
-      background: linear-gradient(to right, #007BFF, #00BFFF); /* Blue gradient */
+      background: linear-gradient(to right, #007BFF, #00BFFF);
       color: #fff;
       font-size: 28px;
       padding: 15px 20px;
       border-radius: 8px;
       margin-bottom: 20px;
+      text-align: center; /* <-- This centers the heading */
     }
 
     h3 {
@@ -68,10 +65,9 @@
 </head>
 <body>
 
-  <!-- Project Section -->
   <section id="project">
-    <h2>Mini Project – Hydration and Temperature Detector</h2>
     <div class="container">
+      <h2>Mini Project – Hydration and Temperature Detector</h2>
       <div class="project-description">
         <p><strong>Objective:</strong> To design and implement a low-cost, real-time body monitoring system using the ESP32 Dev Board that accurately measures body temperature using a DS18B20 sensor and estimates hydration levels via a capacitive moisture sensor. The data is visualized on a compact OLED display, enhancing personal health tracking and biomedical research.</p>
 
@@ -105,3 +101,6 @@
 
 </body>
 </html>
+
+
+  
