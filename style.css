@@ -35,7 +35,7 @@ section {
 .profile-pic {
   width: 160px;
   height: 160px;
-  border-radius: 50%;
+  border-radius: 60%;
   overflow: hidden;
   border: 5px solid #fff;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
