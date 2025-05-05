@@ -118,14 +118,12 @@ a:hover {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
-/* Project Section */
 .project-title {
-  font-size: 2.2em;
-  font-weight: bold;
-  color: brown;
-  text-align: center;
-  margin: 50px 0 20px;
-}
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: #4b2e15;
+      margin-bottom: 40px;
+    }
 
 /* Biomedical Instrumentation Section */
 .biomedical-title {
