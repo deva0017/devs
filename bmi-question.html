@@ -7,134 +7,139 @@
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 40px;
-      background-color: #000;
-      color: #fff;
+      margin: 0;
+      background-color: #0b0c10;
+      color: #ffffff;
+      line-height: 1.6;
     }
 
-    h1, h2 {
-      color: #3399ff;
+    header {
+      background: linear-gradient(90deg, #0056a6, #3399ff);
+      padding: 40px 20px;
+      text-align: center;
+      color: white;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.4em;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
     }
 
     .section {
-      background: #1a1a1a;
+      background-color: #1c1f26;
       padding: 25px;
-      margin-bottom: 30px;
       border-left: 6px solid #3399ff;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 12px rgba(0, 128, 255, 0.15);
+    }
+
+    .section h2 {
+      color: #66ccff;
+      margin-top: 0;
     }
 
     ul {
-      margin-left: 20px;
+      padding-left: 20px;
     }
 
     ul li {
-      padding: 5px 0;
+      margin-bottom: 10px;
     }
 
     strong {
-      color: #ccc;
-    }
-
-    .image-gallery {
-      max-width: 900px;
-      margin: auto;
-      margin-bottom: 40px;
+      color: #f0f0f0;
     }
 
     .image-section {
-      margin-bottom: 30px;
-      background: #1a1a1a;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+      text-align: center;
+      margin-top: 25px;
     }
 
-    .image-section h2 {
-      color: #3399ff;
-    }
-
-    img {
-      width: 100%;
+    .image-section img {
+      max-width: 100%;
       height: auto;
       border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+      margin-top: 10px;
     }
 
-    a {
-      color: #66ccff;
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.6em;
+      }
     }
   </style>
 </head>
 <body>
 
-  <h1>Cardiac Pacemakers: Design, Functionality, and Safety Standards in Biomedical Engineering</h1>
+  <header>
+    <h1>Cardiac Pacemakers: Design, Functionality, and Safety</h1>
+  </header>
 
-  <div class="image-gallery">
-    <div class="image-section">
-      <h2>Single-Chamber Pacemaker</h2>
-      <img src="bmi images.png" alt="Single-Chamber Pacemaker Infographic">
+  <div class="container">
+
+    <div class="section">
+      <h2>1. Evolution and Types of Pacemakers</h2>
+      <p><strong>Evolution:</strong> Pacemakers have evolved from bulky external devices in the 1950s to today’s compact, implantable, battery-powered systems. Technological advancements have led to longer battery life, improved reliability, and intelligent software-based pacing.</p>
+      <p><strong>a) Single-Chamber Pacemaker:</strong></p>
+      <ul>
+        <li>Sends impulses to either the right atrium or right ventricle.</li>
+        <li>Used in atrial fibrillation with slow ventricular response.</li>
+        <li>Advantages: Simple, fewer leads, lower risk.</li>
+      </ul>
+      <p><strong>b) Dual-Chamber Pacemaker:</strong></p>
+      <ul>
+        <li>Stimulates both right atrium and ventricle.</li>
+        <li>Used in AV block or sinus node dysfunction.</li>
+        <li>Advantages: Better synchronization.</li>
+      </ul>
+      <div class="image-section">
+        <img src="bmi images.png" alt="Single-Chamber Pacemaker">
+        <img src="bmi images (2).png" alt="Dual-Chamber Pacemaker">
+      </div>
     </div>
-    <div class="image-section">
-      <h2>Dual-Chamber Pacemaker</h2>
-      <img src="bmi images (2).png" alt="Dual-Chamber Pacemaker Infographic">
+
+    <div class="section">
+      <h2>2. Electrical Safety in Pacemaker Use</h2>
+      <ul>
+        <li><strong>Lead Insulation:</strong> Prevents current leakage, ensures targeted delivery.</li>
+        <li><strong>Overvoltage Protection:</strong> Guards against EMI (e.g., MRI machines).</li>
+        <li><strong>Battery Safety:</strong> Reliable lithium-iodine batteries (7–10 years lifespan).</li>
+        <li><strong>Fail-Safe Modes:</strong> Safe operation during malfunction.</li>
+        <li><strong>Electrical Isolation:</strong> Maintains patient safety during surgery.</li>
+      </ul>
     </div>
+
+    <div class="section">
+      <h2>3. Regulatory and Safety Standards</h2>
+      <ul>
+        <li><strong>FDA:</strong> Oversees approval, quality control, and surveillance in the U.S.</li>
+        <li><strong>ISO 14708-1:</strong> General safety for implantable devices.</li>
+        <li><strong>IEC 60601-1:</strong> Ensures electrical safety for medical equipment.</li>
+        <li><strong>CE Marking:</strong> EU standard compliance.</li>
+        <li><strong>Design Controls:</strong> Risk analysis, software validation, biocompatibility (ISO 10993).</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>4. Safety Testing and Validation</h2>
+      <ul>
+        <li><strong>Bench Testing:</strong> Checks output, leads, and battery life.</li>
+        <li><strong>Biocompatibility:</strong> Confirms safe interaction with body tissues.</li>
+        <li><strong>EMC Testing:</strong> Evaluates resistance to interference.</li>
+        <li><strong>Clinical Trials:</strong> Assess safety and performance in real patients.</li>
+        <li><strong>Accelerated Aging:</strong> Simulates long-term wear.</li>
+        <li><strong>Validation:</strong> Software simulation, redundancy checks, traceable documentation.</li>
+      </ul>
+    </div>
+
   </div>
-
-  <div class="section">
-    <h2>1. Evolution and Types of Pacemakers</h2>
-    <p><strong>Evolution:</strong> Pacemakers have evolved from bulky external devices in the 1950s to today’s compact, implantable, battery-powered systems. Technological advancements have led to longer battery life, improved reliability, and intelligent software-based pacing.</p>
-
-    <p><strong>a) Single-Chamber Pacemaker:</strong></p>
-    <ul>
-      <li>Sends impulses to either the right atrium or right ventricle.</li>
-      <li>Used in atrial fibrillation with slow ventricular response.</li>
-      <li>Advantages: Simple, fewer leads, lower risk.</li>
-    </ul>
-
-    <p><strong>b) Dual-Chamber Pacemaker:</strong></p>
-    <ul>
-      <li>Stimulates both right atrium and ventricle.</li>
-      <li>Used in AV block or sinus node dysfunction.</li>
-      <li>Advantages: Better synchronization.</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>2. Electrical Safety in Pacemaker Use</h2>
-    <ul>
-      <li><strong>Lead Insulation:</strong> Prevents current leakage, ensures targeted delivery.</li>
-      <li><strong>Overvoltage Protection:</strong> Guards against EMI (e.g., MRI machines).</li>
-      <li><strong>Battery Safety:</strong> Reliable lithium-iodine batteries (7–10 years lifespan).</li>
-      <li><strong>Fail-Safe Modes:</strong> Safe operation during malfunction.</li>
-      <li><strong>Electrical Isolation:</strong> Maintains patient safety during surgery.</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>3. Regulatory and Safety Standards</h2>
-    <ul>
-      <li><strong>FDA:</strong> Oversees approval, quality control, and surveillance in the U.S.</li>
-      <li><strong>ISO 14708-1:</strong> General safety for implantable devices.</li>
-      <li><strong>IEC 60601-1:</strong> Ensures electrical safety for medical equipment.</li>
-      <li><strong>CE Marking:</strong> EU standard compliance.</li>
-      <li><strong>Design Controls:</strong> Risk analysis, software validation, biocompatibility (ISO 10993).</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>4. Safety Testing and Validation</h2>
-    <ul>
-      <li><strong>Bench Testing:</strong> Checks output, leads, and battery life.</li>
-      <li><strong>Biocompatibility:</strong> Confirms safe interaction with body tissues.</li>
-      <li><strong>EMC Testing:</strong> Evaluates resistance to interference.</li>
-      <li><strong>Clinical Trials:</strong> Assess safety and performance in real patients.</li>
-      <li><strong>Accelerated Aging:</strong> Simulates long-term wear.</li>
-      <li><strong>Validation:</strong> Software simulation, redundancy checks, traceable documentation.</li>
-    </ul>
-  </div>
-
 </body>
 </html>
-
