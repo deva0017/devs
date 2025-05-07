@@ -141,162 +141,43 @@ a:hover {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
-.project-title {
-      font-size: 2.5rem;
-      font-weight: 600;
-      color: #4b2e15;
-      margin-bottom: 40px;
-    }
+<!-- Project Section -->
+<section id="project" style="padding: 40px; background-color: #0b0c10; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: white;">
+  <h1 style="font-size: 2.5em; font-weight: bold; color: #66ccff; margin-bottom: 30px; text-align: center;">My Projects</h1>
+  
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
 
-/* Biomedical Instrumentation Section */
-.biomedical-title {
-  color: #1e88e5;
-  font-size: 1.8em;
-  font-weight: bold;
-  text-align: left;
-  margin: 20px 0;
-}
+    <div style="background-color: #1c1f26; padding: 24px; border-left: 6px solid #1e88e5; border-radius: 12px; box-shadow: 0 4px 12px rgba(30, 136, 229, 0.15);">
+      <h2 style="font-size: 1.4em; color: #66ccff;">Biomedical Instrumentation Project</h2>
+      <p style="color: #cccccc; margin-top: 10px;">
+        A project focused on designing a basic ECG signal acquisition and analysis system using biomedical sensors and signal processing techniques.
+      </p>
+    </div>
 
-/* Responsive Adjustments */
-@media screen and (max-width: 768px) {
-  .profile-pic {
-    width: 120px;
-    height: 120px;
-  }
+    <div style="background-color: #1c1f26; padding: 24px; border-left: 6px solid #28a745; border-radius: 12px; box-shadow: 0 4px 12px rgba(40, 167, 69, 0.15);">
+      <h2 style="font-size: 1.4em; color: #66ffb3;">Portfolio Website</h2>
+      <p style="color: #cccccc; margin-top: 10px;">
+        A personal portfolio website built with responsive design principles, featuring sections for About, Education, Projects, and Contact.
+      </p>
+    </div>
 
-  .profile-text h1 {
-    font-size: 2em;
-  }
+    <div style="background-color: #1c1f26; padding: 24px; border-left: 6px solid #ffc107; border-radius: 12px; box-shadow: 0 4px 12px rgba(255, 193, 7, 0.15);">
+      <h2 style="font-size: 1.4em; color: #ffe066;">Catch the Ball Game</h2>
+      <p style="color: #cccccc; margin-top: 10px;">
+        An interactive web-based game using HTML Canvas where users control a net to catch falling balls with increasing difficulty.
+      </p>
+    </div>
 
-  section {
-    padding: 25px 15px;
-  }
+    <div style="background-color: #1c1f26; padding: 24px; border-left: 6px solid #dc3545; border-radius: 12px; box-shadow: 0 4px 12px rgba(220, 53, 69, 0.15);">
+      <h2 style="font-size: 1.4em; color: #ff6666;">Simple Chatbot</h2>
+      <p style="color: #cccccc; margin-top: 10px;">
+        A Python-based chatbot using if-else logic to simulate conversations and respond to simple user inputs for FAQs.
+      </p>
+    </div>
 
-  h2 {
-    font-size: 1.6em;
-  }
-}
-/* General Section Styling */
-#project {
-  background-color: #f4f4f9;
-  padding: 40px 20px;
-  font-family: Arial, sans-serif;
-}
+  </div>
+</section>
 
-/* Header Styling */
-#project h2 {
-  text-align: center;
-  font-size: 2.5em;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-/* Container for the content */
-.container {
-  width: 80%;
-  margin: 0 auto;
-  max-width: 1200px;
-}
-
-/* Project Description Styling */
-.project-description {
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 30px;
-}
-
-/* Project Paragraphs */
-.project-description p {
-  font-size: 1.1em;
-  color: #555;
-  line-height: 1.6;
-  margin-bottom: 15px;
-}
-
-/* Styling for headings within project description */
-.project-description h3 {
-  color: #333;
-  font-size: 1.5em;
-  margin-bottom: 10px;
-}
-
-/* List Styling */
-.project-description ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.project-description li {
-  font-size: 1.1em;
-  color: #555;
-  margin-bottom: 8px;
-}
-
-/* Bold text for labels */
-.project-description strong {
-  color: #333;
-  font-weight: bold;
-}
-
-/* Ensure text alignment for subheadings */
-.project-description ul li strong {
-  display: inline-block;
-  width: 160px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  #project {
-    padding: 20px;
-  }
-
-  .container {
-    width: 90%;
-  }
-
-  .project-description {
-    padding: 20px;
-  }
-
-  .project-description ul li strong {
-    width: auto;
-  }
-}
-
-/* Style the section title */
-.project-title {
-  color: #8B0000; /* Dark red */
-  font-size: 32px;
-  font-weight: bold;
-  text-align: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin-bottom: 24px;
-}
-
-/* Style the project card */
-.project-card {
-  background-color: #f0f4ff;
-  padding: 24px;
-  border-radius: 16px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  transition: box-shadow 0.3s ease;
-  margin: 0 auto;
-  max-width: 800px;
-}
-
-/* Add hover effect */
-.project-card:hover {
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
-}
-
-/* Project heading */
-.project-card h2 {
-  font-size: 24px;
-  color: #1d4ed8; /* Tailwind's blue-700 */
-  font-weight: 600;
-  margin-bottom: 8px;
-}
 /* Reset & Base */
 * {
   margin: 0;
