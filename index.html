@@ -182,33 +182,114 @@
   </div>
 </section>
 >
-<!-- Projects Section -->
-<section id="projects" style="padding: 40px; background-color: #0b0c10; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: white;">
-  <h1 style="font-size: 2.5em; font-weight: bold; color: #66ccff; margin-bottom: 30px; text-align: center;">My Projects</h1>
-  
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
 
-    <div style="background-color: #1c1f26; padding: 24px; border-left: 6px solid #3399ff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 128, 255, 0.15);">
-      <h2 style="font-size: 1.6em; color: #66ccff;">📱 Responsive Portfolio Website</h2>
-      <p style="color: #cccccc; margin-top: 10px;">A fully responsive personal portfolio site built with HTML, CSS, and JavaScript. Designed for mobile and desktop.</p>
-      <a href="https://your-link.com" target="_blank" style="display: inline-block; margin-top: 16px; color: #66ccff; text-decoration: none; border-bottom: 1px solid transparent;">View Project</a>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Professional Portfolio - Projects</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f2; /* Classic off-white */
+      color: #222;
+    }
+
+    section#projects {
+      padding: 60px 20px;
+      background-color: #f4f4f2;
+    }
+
+    .project-title {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 40px;
+    }
+
+    .project-card {
+      max-width: 800px;
+      margin: auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .project-card:hover {
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      transform: translateY(-3px);
+    }
+
+    .project-card h2 {
+      font-size: 1.8rem;
+      color: #0056a6;
+      margin-bottom: 10px;
+    }
+
+    .project-card p {
+      font-size: 1rem;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .project-card a {
+      display: inline-block;
+      margin-top: 20px;
+      color: #0056a6;
+      font-weight: 500;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: all 0.2s ease;
+    }
+
+    .project-card a:hover {
+      color: #003f7f;
+      border-bottom: 1px solid #003f7f;
+    }
+  </style>
+</head>
+<body>
+ <section id="projects" class="bg-gradient-to-br from-blue-50 to-white py-12 px-6">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-3xl font-bold text-blue-900 mb-8 border-b-2 border-blue-300 pb-2">Biomedical Instrumentation Projects</h2>
+
+    <!-- Project Card -->
+    <div class="bg-white shadow-lg rounded-2xl p-6 mb-6 border border-blue-100 transition-transform transform hover:scale-105">
+      <h3 class="text-xl font-semibold text-blue-800">Hydration and Temperature Detector</h3>
+      <p class="text-gray-700 mt-2">
+        A biomedical mini-project that monitors real-time body temperature and hydration levels using sensors integrated with the ESP32.
+      </p>
+      <a href="bmi-project.html" class="inline-block mt-4 text-blue-600 hover:text-blue-800 font-medium underline">
+        View Full Project →
+      </a>
     </div>
 
-    <div style="background-color: #1c1f26; padding: 24px; border-left: 6px solid #28a745; border-radius: 12px; box-shadow: 0 4px 12px rgba(40, 167, 69, 0.15);">
-      <h2 style="font-size: 1.6em; color: #66ffb3;">🎮 Catch the Ball Game</h2>
-      <p style="color: #cccccc; margin-top: 10px;">A fun interactive game using HTML Canvas where players catch falling balls with a moving net.</p>
-      <a href="https://your-link.com" target="_blank" style="display: inline-block; margin-top: 16px; color: #66ffb3; text-decoration: none; border-bottom: 1px solid transparent;">View Game</a>
+    <!-- Add more cards as needed -->
+    <div class="bg-white shadow-lg rounded-2xl p-6 border border-blue-100 transition-transform transform hover:scale-105">
+      <h3 class="text-xl font-semibold text-blue-800"> Biomedical instrumentation</h3>
+      <p class="text-gray-700 mt-2">
+        Description of another project goes here.
+      </p>
+      <a href="bmi-question.html" class="inline-block mt-4 text-blue-600 hover:text-blue-800 font-medium underline">
+        View Full Project →
+      </a>
     </div>
-
-    <div style="background-color: #1c1f26; padding: 24px; border-left: 6px solid #ffc107; border-radius: 12px; box-shadow: 0 4px 12px rgba(255, 193, 7, 0.15);">
-      <h2 style="font-size: 1.6em; color: #ffe066;">🤖 Chatbot Assistant</h2>
-      <p style="color: #cccccc; margin-top: 10px;">A basic chatbot created with Python that handles simple queries and responses using conditional logic.</p>
-      <a href="https://your-link.com" target="_blank" style="display: inline-block; margin-top: 16px; color: #ffe066; text-decoration: none; border-bottom: 1px solid transparent;">See Bot</a>
+<div class="bg-white shadow-lg rounded-2xl p-6 mb-6 border border-blue-100 transition-transform transform hover:scale-105">
+      <h3 class="text-xl font-semibold text-blue-800">Bio materials</h3>
+      <p class="text-gray-700 mt-2">
+        hand of reflection action
+      </p>
+      <a href="biomaterials.html" class="inline-block mt-4 text-blue-600 hover:text-blue-800 font-medium underline">
+        View Full Project →
+      </a>
     </div>
 
   </div>
 </section>
-
 
   <!-- Contact Section -->
   <section id="contact" class="p-6 bg-white">
