@@ -183,71 +183,48 @@
 </section>
 >
 
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Professional Portfolio - Projects</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f4f2; /* Classic off-white */
-      color: #222;
-    }
-
-    section#projects {
-      padding: 60px 20px;
-      background-color: #f4f4f2;
-    }
-
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="assets/styles/style.css">
+</head>
 <body>
-  <section id="projects" class="bg-gradient-to-br from-blue-50 to-white py-12 px-6 text-center">
+  <section id="projects">
     <div class="max-w-5xl mx-auto">
-      <h2 class="text-3xl font-bold text-blue-900 mb-8 border-b-2 border-blue-300 pb-2">My Projects</h2>
+      <h2 class="projects-header">My Projects</h2>
       <!-- Project content goes here -->
+
+      <!-- Project Card 1 -->
+      <div class="project-card">
+        <h3 class="project-title">Hydration and Temperature Detector</h3>
+        <p class="project-description">
+          A biomedical mini-project that monitors real-time body temperature and hydration levels using sensors integrated with the ESP32.
+        </p>
+        <a href="bmi-project.html" class="project-link">View Full Project →</a>
+      </div>
+
+      <!-- Project Card 2 -->
+      <div class="project-card">
+        <h3 class="project-title">Biomedical Instrumentation</h3>
+        <p class="project-description">
+          Description of another project goes here.
+        </p>
+        <a href="bmi-question.html" class="project-link">View Full Project →</a>
+      </div>
+
+      <!-- Project Card 3 -->
+      <div class="project-card">
+        <h3 class="project-title">Biomaterials</h3>
+        <p class="project-description">
+          Hand of reflection action.
+        </p>
+        <a href="biomaterials.html" class="project-link">View Full Project →</a>
+      </div>
     </div>
   </section>
-</body>
-
- 
-    <!-- Project Card -->
-    <div class="bg-white shadow-lg rounded-2xl p-6 mb-6 border border-blue-100 transition-transform transform hover:scale-105">
-      <h3 class="text-xl font-semibold text-blue-800">Hydration and Temperature Detector</h3>
-      <p class="text-gray-700 mt-2">
-        A biomedical mini-project that monitors real-time body temperature and hydration levels using sensors integrated with the ESP32.
-      </p>
-      <a href="bmi-project.html" class="inline-block mt-4 text-blue-600 hover:text-blue-800 font-medium underline">
-        View Full Project →
-      </a>
-    </div>
-
-    <!-- Add more cards as needed -->
-    <div class="bg-white shadow-lg rounded-2xl p-6 border border-blue-100 transition-transform transform hover:scale-105">
-      <h3 class="text-xl font-semibold text-blue-800"> Biomedical instrumentation</h3>
-      <p class="text-gray-700 mt-2">
-        Description of another project goes here.
-      </p>
-      <a href="bmi-question.html" class="inline-block mt-4 text-blue-600 hover:text-blue-800 font-medium underline">
-        View Full Project →
-      </a>
-    </div>
-<div class="bg-white shadow-lg rounded-2xl p-6 mb-6 border border-blue-100 transition-transform transform hover:scale-105">
-      <h3 class="text-xl font-semibold text-blue-800">Bio materials</h3>
-      <p class="text-gray-700 mt-2">
-        hand of reflection action
-      </p>
-      <a href="biomaterials.html" class="inline-block mt-4 text-blue-600 hover:text-blue-800 font-medium underline">
-        View Full Project →
-      </a>
-    </div>
-
-  </div>
-</section>
-
-</head>
-
-
-
 </body>
 </html>
