@@ -141,116 +141,30 @@ a:hover {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
-<!-- Project Section -->
-<section id="project" style="padding: 40px; background-color: #0b0c10; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: white;">
-  <h1 style="font-size: 2.5em; font-weight: bold; color: #66ccff; margin-bottom: 30px; text-align: center;">My Projects</h1>
-  
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+.project-title {
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: #4b2e15;
+      margin-bottom: 40px;
+    }
 
-    <div style="background-color: #1c1f26; padding: 24px; border-left: 6px solid #1e88e5; border-radius: 12px; box-shadow: 0 4px 12px rgba(30, 136, 229, 0.15);">
-      <h2 style="font-size: 1.4em; color: #66ccff;">Biomedical Instrumentation Project</h2>
-      <p style="color: #cccccc; margin-top: 10px;">
-        A project focused on designing a basic ECG signal acquisition and analysis system using biomedical sensors and signal processing techniques.
-      </p>
-    </div>
-
-    <div style="background-color: #1c1f26; padding: 24px; border-left: 6px solid #28a745; border-radius: 12px; box-shadow: 0 4px 12px rgba(40, 167, 69, 0.15);">
-      <h2 style="font-size: 1.4em; color: #66ffb3;">Portfolio Website</h2>
-      <p style="color: #cccccc; margin-top: 10px;">
-        A personal portfolio website built with responsive design principles, featuring sections for About, Education, Projects, and Contact.
-      </p>
-    </div>
-
-    <div style="background-color: #1c1f26; padding: 24px; border-left: 6px solid #ffc107; border-radius: 12px; box-shadow: 0 4px 12px rgba(255, 193, 7, 0.15);">
-      <h2 style="font-size: 1.4em; color: #ffe066;">Catch the Ball Game</h2>
-      <p style="color: #cccccc; margin-top: 10px;">
-        An interactive web-based game using HTML Canvas where users control a net to catch falling balls with increasing difficulty.
-      </p>
-    </div>
-
-    <div style="background-color: #1c1f26; padding: 24px; border-left: 6px solid #dc3545; border-radius: 12px; box-shadow: 0 4px 12px rgba(220, 53, 69, 0.15);">
-      <h2 style="font-size: 1.4em; color: #ff6666;">Simple Chatbot</h2>
-      <p style="color: #cccccc; margin-top: 10px;">
-        A Python-based chatbot using if-else logic to simulate conversations and respond to simple user inputs for FAQs.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-/* Reset & Base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4f6f8;
-  color: #333;
-  line-height: 1.6;
-  padding: 20px;
-}
-
-/* Navigation Bar */
-nav {
-  background-color: #004aad;
-  padding: 10px 20px;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-nav a {
-  color: #fff;
-  text-decoration: none;
+/* Biomedical Instrumentation Section */
+.biomedical-title {
+  color: #1e88e5;
+  font-size: 1.8em;
   font-weight: bold;
-}
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* Header and Section */
-header, main, section {
-  max-width: 1000px;
-  margin: 20px auto;
-  padding: 20px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: left;
+  margin: 20px 0;
 }
 
-/* Image Profile */
-img {
-  width: 150px;
-  border-radius: 50%;
-  display: block;
-  margin: 10px auto;
-}
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
 
-/* Titles */
-h1, h2, h3 {
-  color: #004aad;
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-/* Paragraph */
-p {
-  margin-bottom: 10px;
-  font-size: 1rem;
-}
-
-/* Project Links */
-a.project-link {
-  display: inline-block;
-  margin-top: 8px;
-  color: #004aad;
-  text-decoration: none;
-}
-a.project-link:hover {
-  text-decoration: underline;
-}
+  .profile-text h1 {
 
 /* Grid Layout (optional for skills, academics) */
 .grid {
