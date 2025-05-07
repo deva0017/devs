@@ -69,19 +69,42 @@ h2 {
 }
 
 /* About Me */
+#about {
+  background-color: #000;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#about h2 {
+  color: #fff;
+}
+
 #about p {
   font-size: 1.1em;
   line-height: 1.6;
-  color: #555;
+  color: #fff;
 }
 
 /* Education */
+#education,
+#contact {
+  background-color: #000;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#education h2,
+#contact h2 {
+  color: #fff;
+}
+
 #education p,
 #contact p {
   font-size: 1.1em;
   line-height: 1.6;
-  color: #444;
+  color: #fff;
 }
+
 
 /* Contact Links */
 a {
