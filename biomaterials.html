@@ -6,80 +6,143 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #0b0c10;
+      color: #ffffff;
       line-height: 1.6;
-      background-color: #f4f4f4;
-      color: #333;
-      padding: 20px;
     }
-    h1, h2 {
-      color: #0056a6;
+
+    header {
+      padding: 40px 20px;
     }
+
+    .header-box {
+      background: linear-gradient(90deg, #0056a6, #3399ff);
+      padding: 30px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 128, 255, 0.3);
+      text-align: center;
+    }
+
+    .header-box h1 {
+      margin: 0;
+      font-size: 2.4em;
+      color: white;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
     .section {
-      background-color: #fff;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-left: 5px solid #3399ff;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      background-color: #1c1f26;
+      padding: 25px;
+      border-left: 6px solid #3399ff;
+      border-radius: 12px;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 12px rgba(0, 128, 255, 0.15);
     }
+
+    .section h2 {
+      color: #66ccff;
+      margin-top: 0;
+    }
+
     ul {
-      margin-left: 20px;
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    strong {
+      color: #f0f0f0;
+    }
+
+    .image-section {
+      text-align: center;
+      margin-top: 25px;
+    }
+
+    .image-section img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+      margin-top: 10px;
+    }
+
+    @media (max-width: 600px) {
+      .header-box h1 {
+        font-size: 1.6em;
+      }
     }
   </style>
 </head>
 <body>
 
-  <h1>🖐️ Hand Reflex Action – Explained</h1>
-
-  <div class="section">
-    <h2>✅ What Is a Reflex Action?</h2>
-    <p>A reflex action is an involuntary and nearly instantaneous movement in response to a stimulus. It serves as a protective mechanism, allowing the body to respond to potentially harmful situations without the delay of conscious thought. For instance, when you touch a hot surface, your hand withdraws immediately, even before you consciously feel the pain.</p>
-  </div>
-
-  <div class="section">
-    <h2>🔍 Overview</h2>
-    <p>The reflex action of the hand is a swift, involuntary movement in response to potentially harmful stimuli, such as extreme heat or sharp objects. This mechanism is a type of spinal reflex, meaning the brain isn't directly involved in initiating the response. Instead, the spinal cord processes the information and triggers an immediate reaction, ensuring a faster response time.</p>
-  </div>
-
-  <div class="section">
-    <h2>🧬 How It Works – The Reflex Arc</h2>
-    <p>Reflex actions follow a specific neural pathway known as the reflex arc, which includes:</p>
-    <ul>
-      <li><strong>Stimulus:</strong> A harmful stimulus (e.g., heat or pain) is detected by sensory receptors in the skin.</li>
-      <li><strong>Sensory Neuron:</strong> Transmits the signal from the skin to the spinal cord.</li>
-      <li><strong>Interneuron (in spinal cord):</strong> Processes the signal and immediately sends instructions.</li>
-      <li><strong>Motor Neuron:</strong> Carries the command from the spinal cord to the muscles in the hand.</li>
-      <li><strong>Effector (muscle):</strong> Responds by contracting, pulling the hand away from the source of harm.</li>
-    </ul>
-    <p>This entire process bypasses the brain to save time, making it a fast, protective response.</p>
-  </div>
-<section id="portfolio" style="padding: 40px; background-color: #0b0c10; text-align: center; color: white;">
-  <h2 style="font-size: 2.5em; color: #66ccff; margin-bottom: 30px;">My Work</h2>
-  <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-    <div style="width: 300px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
-      <img src="dev bmi . 1.jpeg" alt="Project 1" style="width: 100%; height: auto;" />
+  <header>
+    <div class="header-box">
+      <h1>🖐️ Hand Reflex Action – Explained</h1>
     </div>
-    <div style="width: 300px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
-      <img src="dev bmi . 1.jpeg" alt="Project 2" style="width: 100%; height: auto;" />
-    </div>
-    <div style="width: 300px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
-      <img src="dev bmi . 2.jpeg" alt="Project 3" style="width: 100%; height: auto;" />
-    </div>
-  </div>
-</section>
-  <div class="section">
-    <h2>🔍 Purpose & Importance</h2>
-    <ul>
-      <li><strong>Protective Mechanism:</strong> Reflex actions prevent injury by enabling the body to respond swiftly to harmful stimuli.</li>
-      <li><strong>Diagnostic Tool:</strong> Medical professionals use reflex tests (like tapping tendons) to assess the health of the nervous system.</li>
-      <li><strong>Educational Relevance:</strong> Studying reflex actions helps in understanding fundamental concepts in neurobiology, such as neuron functions and motor control.</li>
-    </ul>
-  </div>
+  </header>
 
-  <div class="section">
-    <h2>🧠 Real-Life Example</h2>
-    <p>Imagine you accidentally touch a hot pan. Before you even feel the pain, your hand jerks away almost instantly. This is your body's reflex action in motion, protecting you from potential burns or deeper injury.</p>
+  <div class="container">
+
+    <div class="section">
+      <h2>✅ What Is a Reflex Action?</h2>
+      <p>A reflex action is an involuntary and nearly instantaneous movement in response to a stimulus. It serves as a protective mechanism, allowing the body to respond to potentially harmful situations without the delay of conscious thought. For instance, when you touch a hot surface, your hand withdraws immediately, even before you consciously feel the pain.</p>
+    </div>
+
+    <div class="section">
+      <h2>🔍 Overview</h2>
+      <p>The reflex action of the hand is a swift, involuntary movement in response to potentially harmful stimuli, such as extreme heat or sharp objects. This mechanism is a type of spinal reflex, meaning the brain isn't directly involved in initiating the response. Instead, the spinal cord processes the information and triggers an immediate reaction, ensuring a faster response time.</p>
+    </div>
+
+    <div class="section">
+      <h2>🧬 How It Works – The Reflex Arc</h2>
+      <p>Reflex actions follow a specific neural pathway known as the reflex arc, which includes:</p>
+      <ul>
+        <li><strong>Stimulus:</strong> A harmful stimulus (e.g., heat or pain) is detected by sensory receptors in the skin.</li>
+        <li><strong>Sensory Neuron:</strong> Transmits the signal from the skin to the spinal cord.</li>
+        <li><strong>Interneuron (in spinal cord):</strong> Processes the signal and immediately sends instructions.</li>
+        <li><strong>Motor Neuron:</strong> Carries the command from the spinal cord to the muscles in the hand.</li>
+        <li><strong>Effector (muscle):</strong> Responds by contracting, pulling the hand away from the source of harm.</li>
+      </ul>
+      <p>This entire process bypasses the brain to save time, making it a fast, protective response.</p>
+    </div>
+
+    <div class="section image-section">
+      <h2>🧠 Real-Life Example</h2>
+      <p>Imagine you accidentally touch a hot pan. Before you even feel the pain, your hand jerks away almost instantly. This is your body's reflex action in motion, protecting you from potential burns or deeper injury.</p>
+    </div>
+
+    <div class="section">
+      <h2>🎯 Purpose & Importance</h2>
+      <ul>
+        <li><strong>Protective Mechanism:</strong> Reflex actions prevent injury by enabling the body to respond swiftly to harmful stimuli.</li>
+        <li><strong>Diagnostic Tool:</strong> Medical professionals use reflex tests (like tapping tendons) to assess the health of the nervous system.</li>
+        <li><strong>Educational Relevance:</strong> Studying reflex actions helps in understanding fundamental concepts in neurobiology, such as neuron functions and motor control.</li>
+      </ul>
+    </div>
+
+    <div class="section image-section">
+      <h2>🖼️ Visual Projects</h2>
+      <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+        <img src="dev bmi . 1.jpeg" alt="Project 1" style="width: 300px;" />
+        <img src="dev bmi . 1.jpeg" alt="Project 2" style="width: 300px;" />
+        <img src="dev bmi . 2.jpeg" alt="Project 3" style="width: 300px;" />
+      </div>
+    </div>
+
   </div>
 
 </body>
 </html>
+
