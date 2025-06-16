@@ -6,38 +6,42 @@
   <title>Devaganesh's Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    .project-title {
-      color: brown;
-      font-weight: bold;
-      font-size: 36px;
-      text-align: center;
-      margin-top: 50px;
-      font-family: Arial, sans-serif;
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #e0f7fa, #fce4ec);
     }
-    .biomedical-title {
-      color: blue;
-      font-size: 28px;
-      font-weight: bold;
-      text-align: left;
-      margin: 20px;
-      font-family: Arial, sans-serif;
+    .glass-card {
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      padding: 24px;
     }
   </style>
 </head>
-<body class="bg-gradient-to-r from-indigo-50 to-blue-100 text-gray-800 font-sans">
+
+<body class="text-gray-800">
 
   <!-- Home Section -->
-  <section id="home" class="p-6">
-    <div class="container mx-auto">
-      <div class="profile flex items-center space-x-6">
+  <section id="home" class="p-8">
+    <div class="container mx-auto max-w-4xl">
+      <div class="glass-card flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-8">
+        
+        <!-- Profile Picture -->
         <div class="profile-pic">
-          <img src="dp" alt="Devaganesh" class="w-32 h-32 rounded-full">
+          <img src="dp" alt="Devaganesh" class="w-36 h-36 rounded-full border-4 border-white shadow-lg">
         </div>
-        <div class="profile-text">
-          <h1 class="text-4xl font-bold text-blue-700">Devaganesh</h1>
-          <p class="text-lg">2nd Year Biomedical Engineering Student at SRM Institute of Science and Technology</p>
+        
+        <!-- Profile Text -->
+        <div class="profile-text text-center md:text-left">
+          <h1 class="text-4xl font-semibold text-blue-700">Devaganesh</h1>
+          <p class="text-lg text-gray-700 mt-2">🎓 2nd Year Biomedical Engineering Student</p>
+          <p class="text-sm text-gray-600">SRM Institute of Science and Technology</p>
         </div>
+
       </div>
     </div>
   </section>
