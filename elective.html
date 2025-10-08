@@ -30,27 +30,33 @@
       margin-bottom: 30px;
     }
 
-    h2 {
+    /* Centered highlighted topic heading */
+    .topic-heading {
+      text-align: center;
+      background-color: #0b6ef6;
+      color: white;
+      font-size: 24px;
+      font-weight: 700;
+      padding: 15px 20px;
+      border-radius: 10px;
+      margin: 40px 0 20px 0;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    h2, h3 {
       color: #0277bd;
-      margin-top: 25px;
-      margin-bottom: 15px;
-      font-weight: 600;
+      margin-top: 20px;
+      margin-bottom: 10px;
     }
 
-    h3 {
-      color: #01579b;
-      margin-bottom: 12px;
-      font-weight: 500;
-    }
-
-    p {
-      margin-bottom: 15px;
+    p, ul, ol {
       font-size: 16px;
+      margin-bottom: 12px;
+      text-align: left;
     }
 
     ul, ol {
       margin-left: 30px;
-      margin-bottom: 15px;
     }
 
     li {
@@ -73,31 +79,6 @@
       border-radius: 10px;
       box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 15px;
-      background-color: #fafafa;
-    }
-
-    th, td {
-      border: 1px solid #90caf9;
-      padding: 10px;
-      text-align: center;
-    }
-
-    th {
-      background-color: #42a5f5;
-      color: white;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 40px;
-      font-size: 0.9rem;
-      color: #555;
-    }
   </style>
 </head>
 <body>
@@ -113,17 +94,14 @@
     <!-- Concept Section -->
     <div class="section">
       <h2>1️⃣ Concept</h2>
-      <p>
-        This system uses <strong>solar energy</strong> to power a water pump, eliminating the need for grid electricity or diesel. 
-        It is highly suitable for remote agricultural areas where farmers often face power shortages.
-      </p>
+      <p>This system uses <strong>solar energy</strong> to power a water pump, eliminating the need for grid electricity or diesel. It is highly suitable for remote agricultural areas.</p>
     </div>
 
     <!-- Key Components Section -->
     <div class="section">
       <h2>2️⃣ Key Components</h2>
       <ul>
-        <li><strong>Solar PV Panels:</strong> Capture sunlight and convert it into electrical energy. The size depends on pump capacity and water demand.</li>
+        <li><strong>Solar PV Panels:</strong> Capture sunlight and convert it into electrical energy.</li>
         <li><strong>Water Pump:</strong> Submersible or surface pump to lift water from wells, rivers, or ponds.</li>
         <li><strong>Controller / MPPT:</strong> Optimizes power output and protects the pump from fluctuations.</li>
         <li><strong>Battery Storage (Optional):</strong> Stores excess energy for use during cloudy periods or at night.</li>
@@ -131,49 +109,12 @@
       </ul>
     </div>
 
-    <!-- Operation Process Section -->
-    <div class="section">
-      <h2>3️⃣ Operation Process</h2>
-      <ol>
-        <li>Sunlight hits solar panels, producing DC electricity.</li>
-        <li>Electricity flows to the controller to regulate voltage/current safely.</li>
-        <li>The pump lifts water to storage tanks or directly to the fields.</li>
-        <li>Water is delivered through drip irrigation or sprinklers.</li>
-        <li>If batteries are included, excess energy is stored for use during low sunlight or peak irrigation demand.</li>
-      </ol>
-    </div>
+    <!-- Centered Topic Heading -->
+    <div class="topic-heading">🌞 Source of Energy</div>
 
-    <!-- Advantages Section -->
+    <!-- Content Under the Topic -->
     <div class="section">
-      <h2>4️⃣ Advantages</h2>
-      <ul>
-        <li><strong>Renewable & Sustainable:</strong> No fuel needed, reduces carbon footprint.</li>
-        <li><strong>Cost-Effective:</strong> Minimal operational cost once installed.</li>
-        <li><strong>Reliable:</strong> Continuous irrigation during sunlight hours.</li>
-        <li><strong>Off-Grid Friendly:</strong> Perfect for rural areas without electricity.</li>
-        <li><strong>Supports Water Management:</strong> Drip or sprinkler systems improve water-use efficiency.</li>
-      </ul>
-    </div>
-
-    <!-- Design Considerations Section -->
-    <div class="section">
-      <h2>5️⃣ Design Considerations</h2>
-      <ul>
-        <li>Daily water requirement of crops.</li>
-        <li>Pump capacity vs. solar panel size.</li>
-        <li>Local sunlight availability.</li>
-        <li>Water source depth and type.</li>
-        <li>Seasonal changes and irrigation scheduling.</li>
-      </ul>
-    </div>
-
-    <!-- Source of Energy Section -->
-    <div class="section">
-      <h2>🌞 Source of Energy</h2>
-      <p>
-        The main source of energy is <strong>solar radiation from the Sun</strong>, which is abundant, renewable, and free. 
-        Solar PV panels convert sunlight into electricity to power pumps directly or store in batteries for later use.
-      </p>
+      <p>The main source of energy is <strong>solar radiation from the Sun</strong>, which is abundant, renewable, and free. Solar PV panels convert sunlight into electricity to power pumps directly or store in batteries for later use.</p>
 
       <h3>Conversion Process</h3>
       <ul>
@@ -196,123 +137,12 @@
         <li>Supporting crop productivity in regions without reliable electricity.</li>
       </ul>
     </div>
-  </div>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Solar-Powered Irrigation Conversion Process</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background-color: #f4f6f8;
-      color: #222;
-      line-height: 1.7;
-    }
-    .container {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 30px 25px;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    }
-    h1 {
-      font-size: 32px;
-      color: #0b6ef6;
-      text-align: center;
-      margin-bottom: 25px;
-    }
-    h2 {
-      font-size: 24px;
-      color: #00796b;
-      margin-top: 30px;
-      margin-bottom: 15px;
-    }
-    p {
-      font-size: 16px;
-      margin-bottom: 12px;
-    }
-    ul {
-      margin-left: 25px;
-      margin-bottom: 15px;
-    }
-    li {
-      margin-bottom: 8px;
-    }
-    .section {
-      margin-bottom: 35px;
-    }
-    .step {
-      background-color: #e8f0fe;
-      border-left: 6px solid #0b6ef6;
-      padding: 15px 20px;
-      border-radius: 6px;
-      margin-bottom: 20px;
-    }
-    .step h3 {
-      margin-top: 0;
-      color: #0b6ef6;
-    }
-  </style>
-</head>
-<body>
-
-  <div class="container">
-    <h1>🌞 Conversion Process of Solar-Powered Irrigation Pumping System</h1>
-
-    <div class="section step">
-      <h3>1️⃣ Solar Energy Capture</h3>
-      <p>Sunlight falls on <strong>solar photovoltaic (PV) panels</strong>.</p>
-      <p>Photons in sunlight excite electrons in the semiconductor material (usually silicon), generating <strong>direct current (DC) electricity</strong>.</p>
-    </div>
-
-    <div class="section step">
-      <h3>2️⃣ Power Conditioning</h3>
-      <p>The DC electricity flows to a <strong>controller</strong> or <strong>Maximum Power Point Tracker (MPPT)</strong>.</p>
-      <p>MPPT ensures the solar panels operate at maximum efficiency and stabilizes voltage/current to protect the pump.</p>
-    </div>
-
-    <div class="section step">
-      <h3>3️⃣ Water Pump Operation</h3>
-      <p>The electricity powers the <strong>water pump</strong> (submersible for deep wells or surface pumps for rivers/ponds).</p>
-      <p>The pump converts <strong>electrical energy → mechanical energy</strong>, lifting water from the source to storage tanks or directly to fields.</p>
-    </div>
-
-    <div class="section step">
-      <h3>4️⃣ Irrigation Distribution</h3>
-      <p>Water is delivered through <strong>drip lines or sprinklers</strong>, ensuring efficient water use and reducing wastage.</p>
-    </div>
-
-    <div class="section step">
-      <h3>5️⃣ Optional Battery Storage</h3>
-      <p>Excess electricity can be stored in <strong>batteries</strong> for:</p>
-      <ul>
-        <li>Pumping at night</li>
-        <li>During cloudy weather</li>
-        <li>Peak irrigation periods</li>
-      </ul>
-    </div>
-
-    <div class="section step">
-      <h3>6️⃣ Energy Efficiency & Monitoring</h3>
-      <p>Modern systems may include <strong>sensors and automated controllers</strong> for:</p>
-      <ul>
-        <li>Real-time monitoring of water levels</li>
-        <li>Pump speed adjustment based on solar energy availability</li>
-        <li>Optimal irrigation scheduling</li>
-      </ul>
-    </div>
 
   </div>
 
-</body>
-</html>
   <footer>
     <p>© 2025 | Solar Irrigation Project | Designed for Off-Grid Agriculture 🌱</p>
   </footer>
+
 </body>
 </html>
