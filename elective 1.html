@@ -110,6 +110,272 @@
       making it ideal for providing decentralized electricity to small coastal communities.
     </p>
   </section>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tidal Power Plant Architecture — Coastal Village (Output &amp; Utilization)</title>
+  <style>
+    :root{--accent:#0b6ef6;--muted:#666;--card:#fff;--bg:#f4f7fb;--maxw:1100px}
+    html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;background:var(--bg);color:#111}
+    .wrap{max-width:var(--maxw);margin:28px auto;padding:24px}
+    header{display:flex;align-items:center;gap:16px}
+    h1{margin:0;font-size:1.6rem}
+    p.lead{margin:6px 0 18px;color:var(--muted)}
+    nav{margin:18px 0;display:flex;gap:8px;flex-wrap:wrap}
+    nav a{background:#fff;padding:8px 12px;border-radius:10px;text-decoration:none;color:var(--accent);border:1px solid #e6eefc;font-weight:600}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(13,38,76,0.06);margin-bottom:14px}
+    section h2{margin-top:0}
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:18px}
+    @media (max-width:880px){.grid{grid-template-columns:1fr}nav{justify-content:flex-start} .wrap{padding:16px}}
+    table{width:100%;border-collapse:collapse}
+    th,td{padding:8px;border:1px solid #eee;text-align:left}
+    code.math{background:#f2f8ff;padding:4px 6px;border-radius:6px;font-family:monospace}
+    footer{font-size:0.9rem;color:var(--muted);margin-top:18px}
+    .badge{display:inline-block;background:#eef6ff;color:var(--accent);padding:4px 8px;border-radius:999px;font-weight:700}
+    ul,responsive{padding-left:18px}
+    pre{background:#0b2a4a;color:#fff;padding:12px;border-radius:8px;overflow:auto}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="badge">Tidal Power — Village Scale</div>
+      <div>
+        <h1>Tidal Power Plant Architecture — Coastal Village</h1>
+        <p class="lead">Complete architecture, technical notes, worked numeric examples and <strong>Output &amp; Utilization</strong> guidance. Ready for publishing as a GitHub Pages site (place this file as <code>index.html</code>).</p>
+      </div>
+    </header>
+
+    <nav>
+      <a href="#output">Output &amp; Utilization</a>
+      <a href="#site">Key Site Checks</a>
+      <a href="#barrage">Option A — Barrage / Lagoon</a>
+      <a href="#stream">Option B — Tidal-Stream Turbines</a>
+      <a href="#electrical">Electrical Architecture</a>
+      <a href="#env">Environment &amp; Social</a>
+      <a href="#om">O&amp;M &amp; Costs</a>
+      <a href="#plan">Project Plan</a>
+    </nav>
+
+    <div class="grid">
+      <main>
+
+        <section id="output" class="card">
+          <h2>Output &amp; Utilization</h2>
+          <p>This section summarises the expected <strong>electrical output</strong> from the two candidate systems and practical ways the village can <strong>utilize</strong> that energy to maximize social and economic benefit.</p>
+
+          <h3>Typical outputs (illustrative)</h3>
+          <ul>
+            <li><strong>Small barrage / lagoon</strong> (example): <code class="math">~2,500 kWh</code> per tidal cycle or <code class="math">~5,000 kWh/day</code> → <code class="math">~209 kW</code> average power.</li>
+            <li><strong>Tidal-stream farm</strong> (example): <code class="math">~16.4 kW</code> per 3.6 m-diameter turbine at <code class="math">2.0 m/s</code>. Ten turbines ≈ <code class="math">164 kW</code> rated (fluctuating with tides).</li>
+          </ul>
+
+          <h3>How to utilize the energy — prioritized strategy</h3>
+          <ol>
+            <li><strong>Critical services</strong>: water supply pumps, community clinic refrigeration, street lighting and communications (radio/Internet gateway).</li>
+            <li><strong>Local livelihood</strong>: fish/freezer cold storage, ice making, rice milling, small-scale agro-processing — these increase local income and create steady daytime loads that match tidal generation.</li>
+            <li><strong>Household electricity</strong>: lights, phones, fans, small appliances. Promote LED and efficient appliances to stretch supply.</li>
+            <li><strong>Economic smoothing</strong>: community battery charging stations and managed EV/e-bike charging during generation peaks; enable micro-enterprises (carpentry, welding) that run on daytime generation.</li>
+          </ol>
+
+          <h3>Storage &amp; load-shifting</h3>
+          <p>Use a BESS sized to cover evening peaks or a target autonomy. Example: if evening peak is <strong>150 kW for 6 hours</strong>, battery needed ≈ <strong>900 kWh</strong> (plus losses). Batteries also improve power quality and islanding.</p>
+
+          <h3>Sizing checklist</h3>
+          <table>
+            <thead><tr><th>Parameter</th><th>Example value</th><th>Why it matters</th></tr></thead>
+            <tbody>
+              <tr><td>Average continuous power</td><td>~200 kW</td><td>Determines transformer and feeder sizing</td></tr>
+              <tr><td>Daily energy</td><td>~5,000 kWh/day</td><td>Used to plan BESS and tariff/power-sharing</td></tr>
+              <tr><td>Household consumption (est.)</td><td>3 kWh/day</td><td>Estimate; replace with local survey</td></tr>
+            </tbody>
+          </table>
+
+        </section>
+
+        <section id="site" class="card">
+          <h2>1) Key site selection checks (do these first)</h2>
+          <ol>
+            <li><strong>Tidal range (meters):</strong> measure typical spring &amp; neap ranges (H).</li>
+            <li><strong>Bathymetry &amp; seabed:</strong> rocky / sandy / soft — affects foundation choices &amp; cost.</li>
+            <li><strong>Flow velocities (m/s):</strong> channel velocities at spring tide — essential for turbine yield estimates.</li>
+            <li><strong>Coastal morphology:</strong> narrow inlet &rarr; good for barrage; wide open coast &rarr; stream turbines.</li>
+            <li><strong>Environmental &amp; social constraints:</strong> mangroves, fisheries, navigation, sacred sites — early consultation required.</li>
+          </ol>
+        </section>
+
+        <section id="barrage" class="card">
+          <h2>2) Option A — Small tidal barrage / lagoon (how it works)</h2>
+          <p><strong>Principle:</strong> create a basin behind a barrier; let tide fill and release through turbines to generate power on ebb and/or flood.</p>
+
+          <h3>Main components</h3>
+          <ul>
+            <li>Concrete/rockfill <em>barrage</em> or embankment across inlet.</li>
+            <li>Sluice gates to control filling/emptying.</li>
+            <li>Bulb or Kaplan turbines with powerhouse (low head, high flow).</li>
+            <li>Intake and tailrace channels.</li>
+            <li>Switchyard, step-up transformer, distribution lines or battery+inverter if off-grid.</li>
+            <li>Control/SCADA and trash screens.</li>
+          </ul>
+
+          <h3>Layout</h3>
+          <p>Barrage across inlet with powerhouse near low point; switchyard onshore; access road and maintenance area.</p>
+
+          <h3>Example energy estimate (worked numeric example)</h3>
+          <p><strong>Assumptions (example village site):</strong></p>
+          <ul>
+            <li>Basin area, <code>A = 500,000 m²</code> (0.5 km²).</li>
+            <li>Tidal range, <code>H = 3.0 m</code>.</li>
+            <li>Seawater density, <code>ρ = 1025 kg/m³</code>.</li>
+            <li>Gravity, <code>g = 9.81 m/s²</code>.</li>
+            <li>Round-trip efficiency, <code>η = 0.40</code> (40%).</li>
+          </ul>
+
+          <p><strong>Potential energy per tidal cycle (simplified barrage formula):</strong></p>
+          <pre>E = 0.5 × ρ × g × A × H² × η</pre>
+
+          <p><strong>Step-by-step arithmetic (digit by digit):</strong></p>
+          <ol>
+            <li><code>H² = 3.0 × 3.0 = 9.0</code> (m²).</li>
+            <li><code>ρ × g = 1025 × 9.81 = 10061.25</code>.</li>
+            <li>Compute full: <code>0.5 × 1025 × 9.81 × 500,000 × 9.0 × 0.40 = 9,049,725,000 J</code> per tidal cycle.</li>
+            <li>Convert to kWh: <code>9,049,725,000 J ÷ 3,600,000 = 2,513.8125 kWh</code> per cycle.</li>
+            <li>Two usable cycles/day ≈ <code>~5,027.625 kWh/day</code> → average <code>~209.5 kW</code>.</li>
+          </ol>
+
+          <p><strong>Interpretation:</strong> at ~209 kW average this barrage could supply ~1,675 households if average household consumption is 3 kWh/day, or community loads such as cold storage, pumps and small industry.</p>
+
+        </section>
+
+        <section id="stream" class="card">
+          <h2>3) Option B — Tidal-stream (in-stream) turbines (how it works)</h2>
+          <p><strong>Principle:</strong> place horizontal- or vertical-axis turbines in tidal currents; power scales with the cube of water speed.</p>
+
+          <h3>Main components</h3>
+          <ul>
+            <li>Multiple in-stream turbines mounted on fixed foundations, gravity anchors, or floating moorings.</li>
+            <li>Subsea cable to shore and onshore switchgear + transformer.</li>
+            <li>Service vessel mooring, control systems, maintenance access.</li>
+          </ul>
+
+          <h3>Power of a single turbine (example)</h3>
+          <p><code>P = 0.5 × ρ × A × Cp × V³</code></p>
+          <p><strong>Assumptions:</strong> <code>ρ = 1025 kg/m³</code>, <code>Cp = 0.40</code>, <code>V = 2.0 m/s</code>, swept area <code>A = 10 m²</code>.</p>
+
+          <p><strong>Compute:</strong></p>
+          <ol>
+            <li><code>V³ = 2.0³ = 8.0</code>.</li>
+            <li><code>0.5 × ρ = 512.5</code>.</li>
+            <li><code>512.5 × A = 5,125</code>; <code>× Cp (0.40) = 2,050</code>.</li>
+            <li><code>2,050 × V³ = 16,400 W</code> → <strong>16.4 kW</strong> per turbine (at that speed).</li>
+          </ol>
+
+          <p><strong>If you install 10 turbines → ≈ 164 kW total (theoretical); daily energy ≈ 3,936 kWh/day (subject to tidal variation and capacity factor).</strong></p>
+
+          <p><strong>Interpretation:</strong> with 10–15 modular turbines you can scale to meet a village demand of a few hundred kW peak. Turbines are modular and lower impact than big civil works.</p>
+
+        </section>
+
+        <section id="electrical" class="card">
+          <h2>4) Electrical architecture &amp; utilization for a coastal village</h2>
+          <ul>
+            <li><strong>Power collection:</strong> subsea collection bus (stream farm) or powerhouse collector (barrage) → onshore switchyard.</li>
+            <li><strong>Transformer:</strong> generate at 400–690 V, transform to 11 kV or 33 kV for local distribution (or as site requires).</li>
+            <li><strong>Distribution options:</strong>
+              <ul>
+                <li><em>Islanded microgrid:</em> generator(s) → distribution + BESS + inverter for smoothing and night supply.</li>
+                <li><em>Grid-tied:</em> feed into regional grid with protection and power-quality equipment.</li>
+              </ul>
+            </li>
+            <li><strong>Storage sizing example:</strong> evening peak 150 kW for 6 hours → battery ≈ 900 kWh (add inverter/roundtrip losses).</li>
+          </ul>
+
+          <h3>Load management &amp; utilization</h3>
+          <p>Prioritize water pumps, clinic refrigeration, and livelihood appliances. Encourage efficient appliances and schedule heavy loads to tidal generation windows.</p>
+        </section>
+
+        <section id="env" class="card">
+          <h2>5) Civil, mechanical &amp; electrical design notes (practical)</h2>
+          <ul>
+            <li><strong>Foundations:</strong> monopiles or gravity foundations depending on depth &amp; seabed.</li>
+            <li><strong>Turbine selection:</strong> low-RPM, robust to debris and biofouling; proven drivetrain components.</li>
+            <li><strong>Corrosion protection:</strong> cathodic protection and marine-grade materials.</li>
+            <li><strong>Marine access:</strong> dredged access channel and offshore moorings for maintenance vessel.</li>
+            <li><strong>Control/protection:</strong> SCADA, remote monitoring, emergency stop.</li>
+            <li><strong>Fish/wildlife mitigation:</strong> fish-friendly blades, screening, seasonal operation adjustments.</li>
+          </ul>
+
+          <h3>Environmental and social considerations</h3>
+          <p><strong>Barrage:</strong> can alter estuary ecology, sediment transport and fisheries — requires EIA and social consultation.</p>
+          <p><strong>Stream turbines:</strong> lower footprint but can affect fisheries and navigation; array planning and stakeholder engagement required.</p>
+        </section>
+
+        <section id="om" class="card">
+          <h2>6) Operation &amp; maintenance (O&amp;M)</h2>
+          <ul>
+            <li>Routine marine inspections every 3–6 months.</li>
+            <li>Remove biofouling, check bearings, perform electrical diagnostics.</li>
+            <li>Keep spare parts stock and train a local O&amp;M team with remote expert support.</li>
+          </ul>
+
+          <h3>7) Cost &amp; timeline (broad guidance)</h3>
+          <p><strong>Barrage:</strong> high capital (USD millions) — civil works dominate; consider only if regional use or combined benefits justify.</p>
+          <p><strong>Tidal-stream farm:</strong> modular costs historically ~USD 4,000–8,000/kW but site-dependent; a 150–300 kW village system may cost hundreds of thousands to a few million USD.</p>
+        </section>
+
+        <section id="plan" class="card">
+          <h2>8) Decision checklist &amp; quick project plan</h2>
+          <ol>
+            <li>If tidal range ≥ 3 m and enclosed bay with low sensitivity → consider small barrage/lagoon.</li>
+            <li>If range &lt; 3 m or you want modular lower-impact deployment → tidal-stream turbines recommended.</li>
+            <li>Faster deployment &amp; lower upfront civil works → tidal-stream with a few turbines + small BESS + microgrid.</li>
+          </ol>
+
+          <h3>Project phases</h3>
+          <ol>
+            <li>Pre-feasibility: tidal data (1 year preferable), bathymetry, stakeholder mapping.</li>
+            <li>Feasibility &amp; EIA: yield estimates, environmental studies.</li>
+            <li>Detailed design &amp; procurement.</li>
+            <li>Construction &amp; installation.</li>
+            <li>Commissioning, community training, operation &amp; monitoring.</li>
+          </ol>
+
+        </section>
+
+      </main>
+
+      <aside>
+        <div class="card">
+          <h3>Quick links</h3>
+          <ul>
+            <li><a href="#output">Output &amp; Utilization</a></li>
+            <li><a href="#site">Site checks</a></li>
+            <li><a href="#barrage">Barrage details</a></li>
+            <li><a href="#stream">Stream turbines</a></li>
+            <li><a href="#electrical">Electrical</a></li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Download &amp; publishing</h3>
+          <p>To publish on GitHub Pages: place this file as <code>index.html</code> in your repo root. See <strong>README</strong> suggestions below.</p>
+        </div>
+
+        <div class="card">
+          <h3>Contact / Notes</h3>
+          <p>Replace example numbers with your site measurements (A, H, V). If you want, I can add diagrams, a printable PDF and a README.md for your GitHub repo.</p>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      <p>Generated for coastal village tidal power planning — editable. Last updated: October 8, 2025.</p>
+    </footer>
+  </div>
+</body>
+</html>
 
 </body>
 </html>
