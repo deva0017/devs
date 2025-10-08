@@ -150,7 +150,180 @@
       <li>Home electricity supply</li>
     </ul>
   </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>⚡ Output and Utilization of a Tidal Power Plant</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #e1f5fe);
+      color: #003366;
+      margin: 0;
+      padding: 30px;
+      line-height: 1.7;
+    }
+    h1 {
+      text-align: center;
+      color: #01579b;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    h2 {
+      color: #0277bd;
+      margin-top: 30px;
+    }
+    .section {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+    ul {
+      margin: 10px 0 10px 30px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    code {
+      display: block;
+      background: #e3f2fd;
+      color: #0d47a1;
+      padding: 10px;
+      border-radius: 8px;
+      margin-top: 10px;
+      white-space: pre-line;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      background-color: #fafafa;
+    }
+    th, td {
+      border: 1px solid #90caf9;
+      padding: 10px;
+      text-align: center;
+    }
+    th {
+      background-color: #42a5f5;
+      color: white;
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
 
+  <h1>⚡ Output and Utilization of a Tidal Power Plant (for a Coastal Village)</h1>
+
+  <div class="section">
+    <h2>🌊 1️⃣ Power Output Estimation</h2>
+    <p>The power output of a tidal power plant depends on several site-specific factors:</p>
+    <ul>
+      <li><strong>Tidal range (H):</strong> Difference between high tide and low tide.</li>
+      <li><strong>Basin area (A):</strong> Surface area of the water trapped or flowing through turbines.</li>
+      <li><strong>Efficiency (η):</strong> Combined efficiency of turbine, generator, and electrical system.</li>
+    </ul>
+    <p><strong>Simplified formula (for a tidal barrage):</strong></p>
+    <code>E = 0.5 × ρ × g × A × H² × η</code>
+    <p>Where:</p>
+    <ul>
+      <li>ρ = density of seawater (≈ 1025 kg/m³)</li>
+      <li>g = acceleration due to gravity (9.81 m/s²)</li>
+    </ul>
+
+    <h3>🔹 Example Calculation (for a coastal village site):</h3>
+    <ul>
+      <li>Basin area (A): 0.5 km² = 500,000 m²</li>
+      <li>Tidal range (H): 3.0 m</li>
+      <li>Efficiency (η): 0.4 (40%)</li>
+    </ul>
+
+    <code>
+E = 0.5 × 1025 × 9.81 × 500,000 × (3)² × 0.4
+≈ 9.05 × 10⁹ joules per tidal cycle
+    </code>
+
+    <p><strong>Convert joules to kWh:</strong></p>
+    <code>
+9.05 × 10⁹ ÷ 3.6 × 10⁶ = 2,513.8 kWh per cycle
+Two cycles per day → ≈ 5,027.6 kWh/day
+Average continuous power → ≈ 209.5 kW
+    </code>
+    <p>This output can comfortably power a coastal village.</p>
+  </div>
+
+  <div class="section">
+    <h2>🏘️ 2️⃣ Utilization in a Coastal Village</h2>
+    <p>The generated power is distributed through the village microgrid or connected to the regional grid, depending on infrastructure.</p>
+
+    <h3>🔹 Local (Off-grid) Utilization:</h3>
+    <ul>
+      <li><strong>Households:</strong> lighting, fans, small appliances</li>
+      <li><strong>Fishing community:</strong> cold storage, ice plants</li>
+      <li><strong>Agriculture:</strong> irrigation pumps, processing units</li>
+      <li><strong>Public utilities:</strong> street lighting, schools, community centers</li>
+      <li><strong>Small businesses:</strong> shops, repair centers, and cottage industries</li>
+    </ul>
+
+    <p>The average village household uses about <strong>3 kWh/day</strong>. So with 5,027 kWh/day generation:</p>
+    <code>5,027 ÷ 3 ≈ 1,675 households powered</code>
+  </div>
+
+  <div class="section">
+    <h2>🔋 3️⃣ Energy Storage & Load Management</h2>
+    <p>Because tidal generation peaks twice daily, <strong>Battery Energy Storage Systems (BESS)</strong> are used to:</p>
+    <ul>
+      <li>Store surplus power during high tide generation</li>
+      <li>Supply electricity during low tide or night hours</li>
+      <li>Maintain voltage and frequency stability</li>
+    </ul>
+    <p>This ensures <strong>24-hour power supply</strong> without interruption.</p>
+  </div>
+
+  <div class="section">
+    <h2>⚙️ 4️⃣ Electrical Utilization System Layout</h2>
+    <ul>
+      <li><strong>Turbines & Generators:</strong> Convert tidal movement to electrical energy.</li>
+      <li><strong>Powerhouse & Switchyard:</strong> Regulate and measure output.</li>
+      <li><strong>Transformer:</strong> Step-up or step-down voltage (400–11,000 V).</li>
+      <li><strong>Distribution Lines:</strong> Deliver power to households and public buildings.</li>
+      <li><strong>Battery Storage + Inverter:</strong> Smooth out power fluctuations.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>🌱 5️⃣ Community Benefits</h2>
+    <ul>
+      <li><strong>Reliable Renewable Power:</strong> Predictable tidal cycles = steady electricity supply.</li>
+      <li><strong>Low Carbon Footprint:</strong> No fuel consumption, no emissions.</li>
+      <li><strong>Socio-economic Upliftment:</strong> Enables ice plants, cold storage, and digital education.</li>
+      <li><strong>Employment:</strong> Local O&M (operation & maintenance) jobs.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>📊 Summary</h2>
+    <table>
+      <tr><th>Parameter</th><th>Example Value</th></tr>
+      <tr><td>Average Output</td><td>≈ 209.5 kW</td></tr>
+      <tr><td>Daily Generation</td><td>≈ 5,000 kWh/day</td></tr>
+      <tr><td>Households Powered</td><td>≈ 1,600–1,700</td></tr>
+      <tr><td>System Type</td><td>Small Tidal Barrage with BESS</td></tr>
+      <tr><td>Main Uses</td><td>Homes, cold storage, lighting, pumps</td></tr>
+    </table>
+  </div>
+
+  <footer>© 2025 Coastal Renewable Energy Project | Designed for Educational Use</footer>
 </body>
 </html>
 </body>
