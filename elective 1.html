@@ -1,304 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tidal Power Plant Architecture — Coastal Village</title>
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tidal Power Plant - Brief Explanation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --accent: #0b6ef6;
-      --muted: #666;
-      --card: #fff;
-      --bg: #f4f7fb;
-      --maxw: 1100px;
-    }
-
-    html, body {
-      height: 100%;
+    body {
       margin: 0;
-      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      background: var(--bg);
-      color: #111;
-    }
-
-    .wrap {
-      max-width: var(--maxw);
-      margin: 28px auto;
-      padding: 24px;
-    }
-
-    header {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .badge {
-      display: inline-block;
-      background: #eef6ff;
-      color: var(--accent);
-      padding: 4px 8px;
-      border-radius: 999px;
-      font-weight: 700;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: 1.8rem;
-      color: #0b355f;
-    }
-
-    p.lead {
-      margin: 6px 0 18px;
-      color: var(--muted);
+      font-family: 'Roboto', sans-serif;
       line-height: 1.6;
+      background-color: #f0f8f5;
+      color: #222;
     }
 
-    nav {
-      margin: 20px 0;
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      background: #fff;
-      padding: 8px 14px;
-      border-radius: 10px;
-      text-decoration: none;
-      color: var(--accent);
-      border: 1px solid #e6eefc;
-      font-weight: 600;
-      transition: background 0.3s;
-    }
-
-    nav a:hover {
-      background: #eaf3ff;
-    }
-
-    .card {
-      background: var(--card);
-      padding: 24px;
-      border-radius: 12px;
-      box-shadow: 0 6px 18px rgba(13, 38, 76, 0.06);
-      margin-bottom: 18px;
-    }
-
-    section h2 {
-      margin-top: 0;
-      color: #064679;
-    }
-
-    table {
+    /* Fullscreen image section */
+    .image-section {
       width: 100%;
-      border-collapse: collapse;
-      margin-top: 12px;
+      height: 100vh; /* Full viewport height */
+      background-color: #e0f2ef;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
     }
 
-    th, td {
-      padding: 10px;
-      border: 1px solid #eee;
-      text-align: left;
+    .image-section img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* image covers section without white space */
+      display: block;
     }
 
-    th {
-      background: #f1f7ff;
+    /* Text section */
+    section {
+      width: 100%;
+      padding: 60px 80px;
+      box-sizing: border-box;
+      background-color: #ffffff;
     }
 
-    code.math {
-      background: #f2f8ff;
-      padding: 4px 6px;
-      border-radius: 6px;
-      font-family: monospace;
-      color: #034b86;
+    h2 {
+      font-size: 32px;
+      color: #00796b;
+      margin-bottom: 20px;
     }
 
-    pre {
-      background: #0b2a4a;
-      color: #fff;
-      padding: 12px;
-      border-radius: 8px;
-      overflow-x: auto;
+    p {
+      font-size: 18px;
+      color: #333;
+      margin-bottom: 0;
     }
 
-    footer {
-      font-size: 0.9rem;
-      color: var(--muted);
-      margin-top: 20px;
-      text-align: center;
-    }
-
-    @media (max-width: 880px) {
-      nav {
-        justify-content: flex-start;
+    @media (max-width: 768px) {
+      section {
+        padding: 30px 20px;
       }
-
-      .wrap {
-        padding: 16px;
+      h2 {
+        font-size: 26px;
       }
-
-      h1 {
-        font-size: 1.5rem;
+      p {
+        font-size: 16px;
       }
     }
   </style>
 </head>
-
 <body>
-  <div class="wrap">
-    <header>
-      <div class="badge">Tidal Power — Village Scale</div>
-      <div>
-        <h1>Tidal Power Plant Architecture — Coastal Village</h1>
-        <p class="lead">
-          Complete architecture, technical notes, worked numeric examples, and <strong>Output & Utilization</strong> guidance. 
-          This page presents a structured, professional layout ready for publication on GitHub Pages.
-        </p>
-      </div>
-    </header>
 
-    <nav>
-      <a href="#output">Output & Utilization</a>
-      <a href="#site">Site Checks</a>
-      <a href="#barrage">Barrage / Lagoon</a>
-      <a href="#stream">Tidal-Stream Turbines</a>
-      <a href="#electrical">Electrical Architecture</a>
-      <a href="#env">Environment & Design</a>
-      <a href="#om">O&M & Costs</a>
-      <a href="#plan">Project Plan</a>
-    </nav>
-
-    <!-- Output & Utilization -->
-    <section id="output" class="card">
-      <h2>Output & Utilization</h2>
-      <p>This section summarizes the expected <strong>electrical output</strong> and practical ways the village can <strong>utilize</strong> that energy to maximize social and economic benefit.</p>
-
-      <h3>Typical Outputs (Illustrative)</h3>
-      <ul>
-        <li><strong>Small Barrage/Lagoon:</strong> ≈ <code class="math">5,000 kWh/day</code> → <code class="math">~209 kW</code> average power.</li>
-        <li><strong>Tidal-Stream Farm:</strong> ≈ <code class="math">16.4 kW</code> per 3.6 m turbine at 2 m/s → 10 turbines ≈ <code class="math">164 kW</code> rated.</li>
-      </ul>
-
-      <h3>Energy Utilization Strategy</h3>
-      <ol>
-        <li><strong>Critical Services:</strong> water supply, clinic refrigeration, street lighting, communication systems.</li>
-        <li><strong>Local Livelihood:</strong> cold storage, ice-making, agro-processing, and small-scale industry.</li>
-        <li><strong>Household Use:</strong> lighting, fans, phone charging, and small appliances.</li>
-        <li><strong>Economic Growth:</strong> battery charging stations and small enterprises during high generation periods.</li>
-      </ol>
-
-      <h3>Storage & Load Shifting</h3>
-      <p>Battery Energy Storage Systems (BESS) can smooth generation. Example: evening peak 150 kW × 6 h → battery ≈ 900 kWh.</p>
-
-      <h3>Sizing Summary</h3>
-      <table>
-        <thead>
-          <tr><th>Parameter</th><th>Example Value</th><th>Purpose</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Average Continuous Power</td><td>~200 kW</td><td>Transformer & feeder sizing</td></tr>
-          <tr><td>Daily Energy</td><td>~5,000 kWh</td><td>Battery & load planning</td></tr>
-          <tr><td>Household Demand</td><td>3 kWh/day</td><td>Used for energy-sharing models</td></tr>
-        </tbody>
-      </table>
-    </section>
-
-    <!-- Site Checks -->
-    <section id="site" class="card">
-      <h2>1) Key Site Selection Checks</h2>
-      <ol>
-        <li><strong>Tidal Range:</strong> Measure spring & neap ranges (H).</li>
-        <li><strong>Bathymetry:</strong> Seabed type affects foundation cost.</li>
-        <li><strong>Flow Velocities:</strong> Key for turbine yield estimates.</li>
-        <li><strong>Coastal Form:</strong> Narrow inlet suits barrage; open coast suits stream turbines.</li>
-        <li><strong>Environmental/Social Constraints:</strong> Include mangroves, fisheries, and community consultation.</li>
-      </ol>
-    </section>
-
-    <!-- Barrage -->
-    <section id="barrage" class="card">
-      <h2>2) Option A — Small Tidal Barrage / Lagoon</h2>
-      <p>Water is stored in a basin at high tide and released through turbines during ebb tide to generate power.</p>
-
-      <h3>Components</h3>
-      <ul>
-        <li>Concrete barrage or embankment</li>
-        <li>Sluice gates</li>
-        <li>Kaplan or bulb turbines</li>
-        <li>Switchyard & step-up transformer</li>
-      </ul>
-
-      <h3>Energy Example</h3>
-      <pre>E = 0.5 × ρ × g × A × H² × η</pre>
-      <p>Example result: ≈ 2,514 kWh per tidal cycle → ≈ 5,000 kWh/day → ~209 kW average.</p>
-    </section>
-
-    <!-- Stream -->
-    <section id="stream" class="card">
-      <h2>3) Option B — Tidal-Stream Turbines</h2>
-      <p>In-stream turbines convert kinetic energy of flowing tides directly into electricity.</p>
-
-      <h3>Formula</h3>
-      <pre>P = 0.5 × ρ × A × Cp × V³</pre>
-      <p>Example: one 3.6 m turbine → 16.4 kW at 2 m/s; 10 turbines → ~164 kW total.</p>
-    </section>
-
-    <!-- Electrical -->
-    <section id="electrical" class="card">
-      <h2>4) Electrical Architecture</h2>
-      <ul>
-        <li>Generation: 400–690 V → Step-up to 11 kV or 33 kV.</li>
-        <li>Distribution: Microgrid or grid-tied depending on village scale.</li>
-        <li>Storage: BESS for night supply and stability.</li>
-        <li>Load Management: Efficient appliances and peak scheduling.</li>
-      </ul>
-    </section>
-
-    <!-- Environment -->
-    <section id="env" class="card">
-      <h2>5) Environmental & Technical Design Notes</h2>
-      <ul>
-        <li>Use corrosion-resistant materials and fish-friendly blades.</li>
-        <li>Implement SCADA and remote monitoring systems.</li>
-        <li>Conduct environmental impact assessment (EIA) early.</li>
-      </ul>
-    </section>
-
-    <!-- O&M -->
-    <section id="om" class="card">
-      <h2>6) Operation & Maintenance</h2>
-      <ul>
-        <li>Regular inspection and cleaning every 3–6 months.</li>
-        <li>Train local technicians and ensure spare part availability.</li>
-        <li>Use predictive maintenance tools where feasible.</li>
-      </ul>
-
-      <h3>7) Cost & Timeline (Overview)</h3>
-      <p><strong>Barrage:</strong> Higher civil costs, longer construction.</p>
-      <p><strong>Stream Turbines:</strong> Modular, faster deployment, scalable to demand.</p>
-    </section>
-
-    <!-- Plan -->
-    <section id="plan" class="card">
-      <h2>8) Project Planning Steps</h2>
-      <ol>
-        <li>Pre-feasibility: Collect tidal data and community input.</li>
-        <li>Feasibility Study & EIA.</li>
-        <li>Engineering Design & Procurement.</li>
-        <li>Construction & Commissioning.</li>
-        <li>Training & Operations Start.</li>
-      </ol>
-    </section>
-
-    <footer>
-      <p>© 2025 Tidal Power Architecture — Coastal Village | Last updated October 8, 2025</p>
-    </footer>
+  <!-- Fullscreen Image Section -->
+  <div class="image-section">
+    <img src="4 th.png" alt="Tidal Power Plant Diagram">
   </div>
+
+  <!-- Brief Explanation Section -->
+  <section id="tidal-brief">
+    <h2>Brief Explanation</h2>
+    <p>
+      Tidal power plants harness energy from the rise and fall of ocean tides, which are driven by the moon and sun. 
+      Water is stored in a tidal basin during high tide and released through turbines when the tide recedes. 
+      The turbines drive generators to produce electricity. A power conditioning system ensures the voltage and frequency 
+      are stable before sending it through distribution lines to the village. Tidal energy is renewable, predictable, 
+      and environmentally friendly. For coastal villages, it provides reliable electricity for homes, fisheries, 
+      irrigation, and community services, making it a sustainable energy solution.
+    </p>
+  </section>
+
 </body>
 </html>
+
 
 
