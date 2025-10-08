@@ -4,45 +4,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tidal Power Plant - Brief Explanation</title>
-  <!-- Google Fonts: Roboto -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      padding: 0;
       font-family: 'Roboto', sans-serif;
       line-height: 1.6;
-      color: #222;
       background-color: #f0f8f5;
+      color: #222;
     }
 
-    /* Image section full width & full height (no white space) */
+    /* Fullscreen image section */
     .image-section {
       width: 100%;
+      height: 100vh; /* Full viewport height */
       background-color: #e0f2ef;
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 0; /* remove top/bottom padding */
-      margin: 0;  /* remove default margin */
+      overflow: hidden;
     }
 
     .image-section img {
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover; /* image covers section without white space */
       display: block;
     }
 
-    /* Full page section: Brief Explanation */
+    /* Text section */
     section {
       width: 100%;
-      padding: 40px 60px;
+      padding: 60px 80px;
       box-sizing: border-box;
       background-color: #ffffff;
     }
 
     h2 {
-      font-size: 28px;
+      font-size: 32px;
       color: #00796b;
       margin-bottom: 20px;
     }
@@ -58,7 +57,7 @@
         padding: 30px 20px;
       }
       h2 {
-        font-size: 24px;
+        font-size: 26px;
       }
       p {
         font-size: 16px;
@@ -68,12 +67,12 @@
 </head>
 <body>
 
-  <!-- Full width Image Section -->
+  <!-- Fullscreen Image Section -->
   <div class="image-section">
     <img src="4 th.png" alt="Tidal Power Plant Diagram">
   </div>
 
-  <!-- Full Page Section: Brief Explanation -->
+  <!-- Brief Explanation Section -->
   <section id="tidal-brief">
     <h2>Brief Explanation</h2>
     <p>
@@ -88,3 +87,4 @@
 
 </body>
 </html>
+
