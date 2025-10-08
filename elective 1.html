@@ -1,208 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coastal Village Tidal Power Architecture</title>
-    <!-- Load Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Load Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <!-- Custom Tailwind Configuration -->
-    <style>
-        /* Custom font for a modern look */
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f0f9ff; /* Light blue/cyan background */
-        }
-        .section-header {
-            border-bottom: 2px solid #38bdf8; /* Sky blue divider */
-        }
-        .card {
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tidal Power Plant - Brief Explanation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f8f9;
+      color: #333;
+    }
+    section {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #0077b6;
+      margin-bottom: 15px;
+    }
+    p {
+      line-height: 1.6;
+    }
+  </style>
 </head>
-<body class="p-4 sm:p-8">
+<body>
 
-    <div class="max-w-6xl mx-auto bg-white shadow-2xl rounded-3xl overflow-hidden">
-         <!-- Image -->
-      <img src="4 th.png" alt="Project Image" style="width: 100%; max-width: 400px; height: auto; object-fit: cover;">
-      <!-- Text Content -->
-      <div style="padding: 20px; flex: 1;">
-        <h3 style="font-size: 1.5em; color: #ffc107;">tidal power plant</h3>
-      </div>
-    </div>
-        <!-- Header Section -->
-        <header class="bg-cyan-600 p-8 text-white text-center">
-            <h1 class="text-4xl sm:text-5xl font-extrabold mb-2 tracking-tight">
-                Micro Tidal Stream Power Plant
-            </h1>
-            <p class="text-lg opacity-90">Architecture for Sustainable Coastal Village Electrification</p>
-        </header>
+  <!-- Section: Brief Explanation -->
+  <section id="tidal-brief">
+    <h2>Brief Explanation</h2>
+    <p>
+      Tidal power plants harness energy from the rise and fall of ocean tides, which are driven by the moon and sun. 
+      Water is stored in a tidal basin during high tide and released through turbines when the tide recedes. 
+      The turbines drive generators to produce electricity. A power conditioning system ensures the voltage and frequency 
+      are stable before sending it through distribution lines to the village. Tidal energy is renewable, predictable, 
+      and environmentally friendly. For coastal villages, it provides reliable electricity for homes, fisheries, 
+      irrigation, and community services, making it a sustainable energy solution.
+    </p>
+  </section>
 
-        <main class="p-6 sm:p-12 space-y-12">
-
-            <!-- Introduction -->
-            <section class="text-gray-700 bg-blue-50 p-6 rounded-xl border border-blue-200">
-                <h2 class="text-2xl font-bold text-cyan-700 mb-4">Approach: Tidal Stream Generation (TSG)</h2>
-                <p class="text-lg leading-relaxed">
-                    The chosen architecture is the **Tidal Stream Generator (TSG) System**. This approach harnesses the kinetic energy of moving water, which is more scalable and environmentally friendly for a small village than a large tidal barrage. It focuses on a small array of **Micro-Hydrokinetic Turbines ($\mu$-HKT)** to meet local, decentralized energy needs.
-                </p>
-            </section>
-            
-            <!-- Section 1: Energy Capture -->
-            <section>
-                <h2 class="text-3xl font-bold text-gray-800 pb-4 mb-6 section-header flex items-center gap-3">
-                    <i data-lucide="waves" class="w-8 h-8 text-cyan-600"></i>
-                    1. Energy Capture: Tidal Turbines
-                </h2>
-                
-                <div class="grid md:grid-cols-2 gap-8">
-                    <!-- Component: Tidal Turbines -->
-                    <div class="card bg-gray-50 p-6 rounded-xl shadow-lg border-t-4 border-cyan-500">
-                        <div class="flex items-center space-x-3 mb-4">
-                            <i data-lucide="activity" class="w-8 h-8 text-cyan-600"></i>
-                            <h3 class="text-xl font-semibold text-gray-900">Tidal Turbines ($\mu$-HKT)</h3>
-                        </div>
-                        <p class="text-gray-600">These are small, propeller-type turbines (1 kW to 100 kW range) designed for **Bidirectional Operation** to generate power during both the **flood tide** (incoming) and the **ebb tide** (outgoing). They must be of **Robust Design** to resist corrosion and strong currents.</p>
-                    </div>
-
-                    <!-- Component: Support Structure & Protection -->
-                    <div class="card bg-gray-50 p-6 rounded-xl shadow-lg border-t-4 border-cyan-500">
-                        <div class="flex items-center space-x-3 mb-4">
-                            <i data-lucide="anchor" class="w-8 h-8 text-cyan-600"></i>
-                            <h3 class="text-xl font-semibold text-gray-900">Mounting & Protection</h3>
-                        </div>
-                        <p class="text-gray-600">Turbines are secured using a **Support Structure** like a **Fixed/Gravity Base** on the seabed or a **Floating Platform** for easier maintenance. **Fish Screens** or exclusion systems are mandatory to protect marine life and prevent debris damage.</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Section 2: Power Conversion and Conditioning -->
-            <section>
-                <h2 class="text-3xl font-bold text-gray-800 pb-4 mb-6 section-header flex items-center gap-3">
-                    <i data-lucide="plug-zap" class="w-8 h-8 text-cyan-600"></i>
-                    2. Power Conversion and Conditioning
-                </h2>
-                
-                <div class="grid md:grid-cols-3 gap-8">
-                    <!-- Component: Generator -->
-                    <div class="card bg-white p-6 rounded-xl shadow-xl border border-gray-200">
-                        <div class="flex items-center space-x-3 mb-4">
-                            <i data-lucide="bolt" class="w-8 h-8 text-amber-500"></i>
-                            <h3 class="text-xl font-semibold text-gray-900">Generator</h3>
-                        </div>
-                        <p class="text-gray-600">Directly coupled to the turbine shaft, it converts rotational mechanical energy into raw, variable **Alternating Current (AC)** electricity.</p>
-                    </div>
-                    
-                    <!-- Component: Rectifier & Inverter -->
-                    <div class="card bg-white p-6 rounded-xl shadow-xl border border-gray-200">
-                        <div class="flex items-center space-x-3 mb-4">
-                            <i data-lucide="settings" class="w-8 h-8 text-red-500"></i>
-                            <h3 class="text-xl font-semibold text-gray-900">Rectifier & Inverter (PCS)</h3>
-                        </div>
-                        <p class="text-gray-600">The **Rectifier** converts variable AC to stable **DC power**. The **Inverter** then converts the DC back into high-quality **AC power** that perfectly matches the required village grid standards (voltage and frequency).</p>
-                    </div>
-
-                    <!-- Component: Control System -->
-                    <div class="card bg-white p-6 rounded-xl shadow-xl border border-gray-200">
-                        <div class="flex items-center space-x-3 mb-4">
-                            <i data-lucide="cpu" class="w-8 h-8 text-indigo-500"></i>
-                            <h3 class="text-xl font-semibold text-gray-900">Control System</h3>
-                        </div>
-                        <p class="text-gray-600">A microprocessor system that constantly optimizes turbine speed for maximum power (MPPT) and precisely manages the charging and discharging of the Battery Energy Storage System (BESS).</p>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Section 3: Storage and Distribution -->
-            <section>
-                <h2 class="text-3xl font-bold text-gray-800 pb-4 mb-6 section-header flex items-center gap-3">
-                    <i data-lucide="network" class="w-8 h-8 text-cyan-600"></i>
-                    3. Storage and Distribution (Micro-Grid Integration)
-                </h2>
-                
-                <div class="grid md:grid-cols-2 gap-8">
-                    <!-- Component: BESS -->
-                    <div class="card bg-emerald-50 p-6 rounded-xl shadow-lg border-t-4 border-emerald-500">
-                        <div class="flex items-center space-x-3 mb-4">
-                            <i data-lucide="battery-charging" class="w-8 h-8 text-emerald-600"></i>
-                            <h3 class="text-xl font-semibold text-gray-900">Battery Energy Storage System (BESS)</h3>
-                        </div>
-                        <ul class="list-disc list-inside text-gray-700 space-y-1 ml-2">
-                            <li>**Purpose:** Stores excess energy to ensure a **continuous supply** during **slack tide** (zero current) periods.</li>
-                            <li>**Grid Stabilization:** Provides voltage regulation and acts as a buffer against sudden changes in load, ensuring a stable **Micro-Grid**.</li>
-                        </ul>
-                    </div>
-
-                    <!-- Component: Grid Integration -->
-                    <div class="card bg-emerald-50 p-6 rounded-xl shadow-lg border-t-4 border-emerald-500">
-                        <div class="flex items-center space-x-3 mb-4">
-                            <i data-lucide="home" class="w-8 h-8 text-emerald-600"></i>
-                            <h3 class="text-xl font-semibold text-gray-900">Grid Connection & Distribution</h3>
-                        </div>
-                        <ul class="list-disc list-inside text-gray-700 space-y-1 ml-2">
-                            <li>**Submarine Cable:** Transmits power from the offshore turbines to the onshore Control House.</li>
-                            <li>**Step-up Transformer (Optional):** Used for efficient transmission if the distance is long.</li>
-                            <li>**Village Distribution:** The BESS and Inverter connect directly to the local low-voltage network, serving local **Village Loads**.</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- System Flow Diagram (Simplified) -->
-            <section class="mt-12">
-                <h2 class="text-3xl font-bold text-gray-800 pb-4 mb-6 section-header flex items-center gap-3">
-                    <i data-lucide="send-to-back" class="w-8 h-8 text-cyan-600"></i>
-                    System Flow Summary
-                </h2>
-                <div class="bg-blue-900 text-white p-8 rounded-xl shadow-2xl flex flex-col items-center space-y-4 text-center">
-                    
-                    <p class="text-2xl font-extrabold text-blue-300">TIDAL CURRENT (Kinetic Energy)</p>
-                    <i data-lucide="chevrons-down" class="w-8 h-8 text-cyan-400 animate-bounce"></i>
-                    
-                    <div class="flex flex-wrap justify-center items-center gap-4">
-                        <span class="bg-cyan-700 p-3 rounded-full font-semibold">TIDAL TURBINE</span>
-                        <i data-lucide="arrow-right" class="w-6 h-6 text-cyan-400 hidden sm:block"></i>
-                        <span class="bg-cyan-700 p-3 rounded-full font-semibold">GENERATOR (Raw AC)</span>
-                        <i data-lucide="arrow-right" class="w-6 h-6 text-cyan-400 hidden sm:block"></i>
-                        <span class="bg-cyan-700 p-3 rounded-full font-semibold">POWER CONDITIONING</span>
-                    </div>
-
-                    <i data-lucide="chevrons-down" class="w-8 h-8 text-cyan-400 animate-bounce mt-4"></i>
-
-                    <div class="flex flex-wrap justify-center items-center gap-6">
-                        <div class="p-4 bg-emerald-600 rounded-lg shadow-xl font-semibold">
-                            BATTERY STORAGE (BESS)
-                        </div>
-                        <i data-lucide="arrow-right" class="w-6 h-6 text-cyan-400"></i>
-                        <div class="p-4 bg-yellow-500 text-gray-900 rounded-lg shadow-xl font-extrabold">
-                            VILLAGE MICRO-GRID
-                        </div>
-                    </div>
-                    
-                    <i data-lucide="chevrons-down" class="w-8 h-8 text-cyan-400 animate-bounce mt-4"></i>
-                    <p class="text-2xl font-extrabold text-blue-300">VILLAGE LOADS (Continuous Power)</p>
-                </div>
-            </section>
-            
-        </main>
-        
-        <footer class="bg-cyan-700 p-4 text-center text-white text-sm">
-            <p>&copy; 2025 Renewable Energy Micro-System Design</p>
-        </footer>
-
-    </div>
-
-    <script>
-        // Initialize Lucide Icons
-        lucide.createIcons();
-    </script>
 </body>
 </html>
