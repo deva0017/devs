@@ -9,52 +9,81 @@
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
-      background-color: #f0f8f5;
+      background-color: #f4f6f8;
       color: #222;
       line-height: 1.6;
     }
+
     .container {
       max-width: 900px;
       margin: 40px auto;
-      padding: 20px;
+      padding: 30px 20px;
       background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     }
-    h1, h2, h3 {
-      color: #0b6ef6;
-    }
+
     h1 {
-      font-size: 28px;
-      margin-bottom: 20px;
+      font-size: 32px;
+      color: #0b6ef6;
       text-align: center;
+      margin-bottom: 25px;
     }
+
     h2 {
-      font-size: 22px;
+      font-size: 24px;
+      color: #00796b;
       margin-top: 30px;
       margin-bottom: 15px;
     }
+
+    h3 {
+      font-size: 20px;
+      color: #0b6ef6;
+      margin-bottom: 12px;
+    }
+
     p {
-      margin-bottom: 12px;
       font-size: 16px;
+      margin-bottom: 15px;
     }
+
     ul, ol {
-      margin-left: 20px;
-      margin-bottom: 12px;
+      margin-left: 25px;
+      margin-bottom: 15px;
     }
+
     li {
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
+
     .section {
-      margin-bottom: 30px;
+      margin-bottom: 35px;
+    }
+
+    .image-section img {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto 30px;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    /* Optional: Add a subtle line between sections */
+    .section + .section {
+      border-top: 1px solid #e0e0e0;
+      padding-top: 25px;
     }
   </style>
 </head>
 <body>
+
   <!-- Fullscreen Image Section -->
   <div class="image-section">
-    <img src="2nd .png.png" alt="solar power irrigation Diagram">
+    <img src="2nd .png.png" alt="Solar Power Irrigation Diagram">
   </div>
+
   <div class="container">
     <h1>Solar-Powered Irrigation Pumping System — Explanation</h1>
 
@@ -73,7 +102,7 @@
       <ul>
         <li><strong>Solar PV Panels:</strong> Capture sunlight and convert it into electrical energy. The size depends on pump capacity and water demand.</li>
         <li><strong>Water Pump:</strong> Can be submersible (for deep wells) or surface pumps (for rivers/ponds). Converts electrical energy into mechanical energy to lift water.</li>
-        <li><strong>Controller / MPPT (Maximum Power Point Tracker):</strong> Optimizes power output from the panels and protects the pump from fluctuations.</li>
+        <li><strong>Controller / MPPT:</strong> Optimizes power output from the panels and protects the pump from fluctuations.</li>
         <li><strong>Battery Storage (Optional):</strong> Stores excess energy to allow pumping during cloudy periods or at night.</li>
         <li><strong>Irrigation Network:</strong> Pipes, drip lines, or sprinklers distribute water efficiently to crops.</li>
       </ul>
@@ -114,43 +143,44 @@
         <li>Seasonal changes and irrigation scheduling.</li>
       </ul>
     </div>
-<h2>🌞 Source of Energy for Solar-Powered Irrigation Pumping</h2>
 
-  <p>
-    The primary source of energy for a solar-powered irrigation system is <strong>solar radiation from the Sun</strong>. 
-    Solar energy is abundant, renewable, and freely available, making it ideal for off-grid agricultural applications. 
-    Here’s how it works in context:
-  </p>
+    <!-- Source of Energy Section -->
+    <div class="section">
+      <h2>🌞 Source of Energy for Solar-Powered Irrigation Pumping</h2>
+      <p>
+        The primary source of energy for a solar-powered irrigation system is <strong>solar radiation from the Sun</strong>. 
+        Solar energy is abundant, renewable, and freely available, making it ideal for off-grid agricultural applications.
+      </p>
 
-  <h3>Solar Radiation (Sunlight)</h3>
-  <p>
-    Sunlight consists of photons carrying energy. When these photons strike solar photovoltaic (PV) panels, 
-    they excite electrons in the semiconductor material (usually silicon), generating direct current (DC) electricity.
-  </p>
+      <h3>Solar Radiation (Sunlight)</h3>
+      <p>
+        Sunlight consists of photons carrying energy. When these photons strike solar photovoltaic (PV) panels, 
+        they excite electrons in the semiconductor material (usually silicon), generating direct current (DC) electricity.
+      </p>
 
-  <h3>Conversion Process</h3>
-  <ul>
-    <li>Solar PV panels convert sunlight → electrical energy.</li>
-    <li>The electricity generated can either be used immediately to run the pump or stored in batteries for later use (e.g., at night or during cloudy weather).</li>
-  </ul>
+      <h3>Conversion Process</h3>
+      <ul>
+        <li>Solar PV panels convert sunlight → electrical energy.</li>
+        <li>The electricity generated can either be used immediately to run the pump or stored in batteries for later use (e.g., at night or during cloudy weather).</li>
+      </ul>
 
-  <h3>Advantages of Solar Energy for Irrigation</h3>
-  <ul>
-    <li><strong>Renewable:</strong> The Sun is a limitless energy source.</li>
-    <li><strong>Predictable:</strong> Solar availability can be estimated based on daily and seasonal sunlight patterns.</li>
-    <li><strong>Off-Grid Friendly:</strong> No need for diesel generators or connection to the electrical grid, ideal for remote farmlands.</li>
-    <li><strong>Sustainable:</strong> Reduces carbon emissions and operational costs compared to conventional fuel-powered pumps.</li>
-  </ul>
+      <h3>Advantages of Solar Energy for Irrigation</h3>
+      <ul>
+        <li><strong>Renewable:</strong> The Sun is a limitless energy source.</li>
+        <li><strong>Predictable:</strong> Solar availability can be estimated based on daily and seasonal sunlight patterns.</li>
+        <li><strong>Off-Grid Friendly:</strong> No need for diesel generators or connection to the electrical grid, ideal for remote farmlands.</li>
+        <li><strong>Sustainable:</strong> Reduces carbon emissions and operational costs compared to conventional fuel-powered pumps.</li>
+      </ul>
 
-  <h3>Application in Agriculture</h3>
-  <ul>
-    <li>Powering water pumps to lift water from wells, rivers, or storage tanks.</li>
-    <li>Enabling efficient irrigation systems such as drip or sprinkler systems.</li>
-    <li>Supporting crop productivity in regions without reliable electricity supply.</li>
-  </ul>
+      <h3>Application in Agriculture</h3>
+      <ul>
+        <li>Powering water pumps to lift water from wells, rivers, or storage tanks.</li>
+        <li>Enabling efficient irrigation systems such as drip or sprinkler systems.</li>
+        <li>Supporting crop productivity in regions without reliable electricity supply.</li>
+      </ul>
+    </div>
 
+  </div>
 </body>
-</html>
 
-</body>
 </html>
