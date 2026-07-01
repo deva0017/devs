@@ -1,297 +1,375 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Devaganesh's Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    .project-title {
-      color: brown;
-      font-weight: bold;
-      font-size: 36px;
-      text-align: center;
-      margin-top: 50px;
-      font-family: Arial, sans-serif;
-    }
-    .biomedical-title {
-      color: blue;
-      font-size: 28px;
-      font-weight: bold;
-      text-align: left;
-      margin: 20px;
-      font-family: Arial, sans-serif;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deva Ganesh | Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial,Helvetica,sans-serif;
+        }
+
+        body{
+            background:#f4f6f9;
+            color:#333;
+        }
+
+        header{
+            background:#0d6efd;
+            color:white;
+            padding:15px 40px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            position:sticky;
+            top:0;
+        }
+
+        header h2{
+            letter-spacing:1px;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin-left:20px;
+            font-weight:bold;
+        }
+
+        nav a:hover{
+            color:yellow;
+        }
+
+        .hero{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            flex-wrap:wrap;
+            padding:70px 30px;
+            background:white;
+        }
+
+        .hero img{
+            width:260px;
+            border-radius:50%;
+            border:5px solid #0d6efd;
+            margin:20px;
+        }
+
+        .hero-text{
+            max-width:600px;
+            margin:20px;
+        }
+
+        .hero-text h1{
+            font-size:45px;
+            color:#0d6efd;
+        }
+
+        .hero-text h3{
+            margin:15px 0;
+            color:#555;
+        }
+
+        .hero-text p{
+            line-height:1.7;
+        }
+
+        .btn{
+            display:inline-block;
+            margin-top:20px;
+            background:#0d6efd;
+            color:white;
+            text-decoration:none;
+            padding:12px 25px;
+            border-radius:5px;
+        }
+
+        section{
+            padding:60px 40px;
+        }
+
+        h2{
+            text-align:center;
+            color:#0d6efd;
+            margin-bottom:30px;
+        }
+
+        .skills{
+            display:flex;
+            justify-content:center;
+            flex-wrap:wrap;
+            gap:15px;
+        }
+
+        .skill{
+            background:white;
+            padding:15px 25px;
+            border-radius:8px;
+            box-shadow:0 0 10px rgba(0,0,0,.1);
+        }
+
+        .projects{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            gap:20px;
+        }
+
+        .card{
+            background:white;
+            border-radius:10px;
+            overflow:hidden;
+            box-shadow:0 0 10px rgba(0,0,0,.1);
+            transition:.3s;
+        }
+
+        .card:hover{
+            transform:translateY(-8px);
+        }
+
+        .card img{
+            width:100%;
+            height:200px;
+            object-fit:cover;
+        }
+
+        .card-content{
+            padding:20px;
+        }
+
+        .card-content h3{
+            color:#0d6efd;
+        }
+
+        .card-content p{
+            margin:10px 0;
+        }
+
+        .card-content a{
+            text-decoration:none;
+            color:white;
+            background:#0d6efd;
+            padding:10px 18px;
+            display:inline-block;
+            border-radius:5px;
+        }
+
+        footer{
+            background:#0d6efd;
+            color:white;
+            text-align:center;
+            padding:20px;
+        }
+
+        @media(max-width:768px){
+            .hero{
+                text-align:center;
+            }
+
+            header{
+                flex-direction:column;
+            }
+
+            nav{
+                margin-top:10px;
+            }
+        }
+    </style>
+
 </head>
-<body class="bg-gradient-to-r from-indigo-50 to-blue-100 text-gray-800 font-sans">
+<body>
 
-  <!-- Home Section -->
-  <section id="home" class="p-6">
-    <div class="container mx-auto">
-      <div class="profile flex items-center space-x-6">
-        <div class="profile-pic">
-          <img src="dp" alt="Devaganesh" class="w-32 h-32 rounded-full">
-        </div>
-        <div class="profile-text">
-          <h1 class="text-4xl font-bold text-blue-700">Devaganesh</h1>
-          <p class="text-lg">2nd Year Biomedical Engineering Student at SRM Institute of Science and Technology</p>
-        </div>
-      </div>
-    </div>
-  </section> 
-  <!-- About Me Section -->
-  <section id="about" class="p-6 bg-white">
-    <h2 class="text-3xl font-semibold text-blue-800 mb-4">About Me</h2>
-    <p>
-      I’m a passionate Biomedical Engineering student interested in merging healthcare with technology. 
-      I love exploring how devices and software can improve patient care and diagnosis. 
-      I’m also curious about coding and learning new tools that can make a real-world impact.
-    </p>
-  </section>
+<header>
 
- <!-- Hobbies & Passions -->
-<section id="hobbies" style="padding: 40px; background-color: #0b0c10; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: white;">
-  <h1 style="font-size: 2.5em; font-weight: bold; color: #66ccff; margin-bottom: 30px;">My Hobbies & Passions</h1>
-  <p style="font-size: 1.2em; color: #cccccc; margin-bottom: 40px;">
-    Here’s a look at the things that excite me, energize me, and keep me creative!
-  </p>
+<h2>Deva Ganesh</h2>
 
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+<nav>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
 
-    <div style="background-color: #1c1f26; padding: 20px; border-left: 6px solid #3399ff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 128, 255, 0.15);">
-      <h2 style="font-size: 1.6em; color: #66ccff;">🏐 Volleyball</h2>
-      <p style="color: #cccccc; margin-top: 10px;">An adrenaline-filled sport I love playing competitively.</p>
-    </div>
+</header>
 
-    <div style="background-color: #1c1f26; padding: 20px; border-left: 6px solid #28a745; border-radius: 12px; box-shadow: 0 4px 12px rgba(40, 167, 69, 0.15);">
-      <h2 style="font-size: 1.6em; color: #66ffb3;">🧭 Exploration</h2>
-      <p style="color: #cccccc; margin-top: 10px;">I enjoy discovering new places, cultures, and perspectives.</p>
-    </div>
+<section class="hero">
 
-    <div style="background-color: #1c1f26; padding: 20px; border-left: 6px solid #ffc107; border-radius: 12px; box-shadow: 0 4px 12px rgba(255, 193, 7, 0.15);">
-      <h2 style="font-size: 1.6em; color: #ffe066;">✈️ Travel</h2>
-      <p style="color: #cccccc; margin-top: 10px;">Traveling gives me inspiration and fresh ideas.</p>
-    </div>
+<img src="deva.picu.jpeg" alt="Profile">
 
-    <div style="background-color: #1c1f26; padding: 20px; border-left: 6px solid #6f42c1; border-radius: 12px; box-shadow: 0 4px 12px rgba(111, 66, 193, 0.15);">
-      <h2 style="font-size: 1.6em; color: #d6b3ff;">🎬 Video Editing</h2>
-      <p style="color: #cccccc; margin-top: 10px;">I love telling stories through motion and effects.</p>
-    </div>
+<div class="hero-text">
 
-    <div style="background-color: #1c1f26; padding: 20px; border-left: 6px solid #e83e8c; border-radius: 12px; box-shadow: 0 4px 12px rgba(232, 62, 140, 0.15);">
-      <h2 style="font-size: 1.6em; color: #ff99cc;">📸 Photo Editing</h2>
-      <p style="color: #cccccc; margin-top: 10px;">A creative outlet to enhance moments through design.</p>
-    </div>
+<h1>Deva Ganesh</h1>
 
-    <div style="background-color: #1c1f26; padding: 20px; border-left: 6px solid #6610f2; border-radius: 12px; box-shadow: 0 4px 12px rgba(102, 16, 242, 0.15);">
-      <h2 style="font-size: 1.6em; color: #b399ff;">📱 Instagram Influencer</h2>
-      <p style="color: #cccccc; margin-top: 10px;">I love building a personal brand and engaging an audience.</p>
-    </div>
+<h3>Biomedical Engineer | Web Developer</h3>
 
-    <div style="background-color: #1c1f26; padding: 20px; border-left: 6px solid #dc3545; border-radius: 12px; box-shadow: 0 4px 12px rgba(220, 53, 69, 0.15);">
-      <h2 style="font-size: 1.6em; color: #ff6666;">🤝 Socialising</h2>
-      <p style="color: #cccccc; margin-top: 10px;">Networking and learning through people energizes me.</p>
-    </div>
+<p>
+Passionate Biomedical Engineering professional with an interest in Web Development,
+Educational Websites and Biomedical Technologies. I enjoy creating responsive
+web applications and academic resources for students.
+</p>
 
-  </div>
-  < <!-- Skills Section -->
-<section id="skills" style="padding: 40px; background-color: #0b0c10; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: white;">
-  <h1 style="font-size: 2.5em; font-weight: bold; color: #66ccff; margin-bottom: 30px;">My Technical Skills</h1>
-  <p style="font-size: 1.2em; color: #cccccc; margin-bottom: 40px;">
-    Here are some of the key skills I'm developing and passionate about.
-  </p>
+<a href="#projects" class="btn">View Projects</a>
 
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+</div>
 
-    <div style="background-color: #1c1f26; padding: 20px; border-left: 6px solid #3399ff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 128, 255, 0.15);">
-      <h2 style="font-size: 1.6em; color: #66ccff;">🐍 Python (Basics)</h2>
-      <p style="color: #cccccc; margin-top: 10px;">I use it for basic programming, problem-solving, and data manipulation.</p>
-    </div>
-
-    <div style="background-color: #1c1f26; padding: 20px; border-left: 6px solid #28a745; border-radius: 12px; box-shadow: 0 4px 12px rgba(40, 167, 69, 0.15);">
-      <h2 style="font-size: 1.6em; color: #66ffb3;">🧱 3D Modelling</h2>
-      <p style="color: #cccccc; margin-top: 10px;">Designing with tools like Blender or Fusion 360.</p>
-    </div>
-
-    <div style="background-color: #1c1f26; padding: 20px; border-left: 6px solid #6f42c1; border-radius: 12px; box-shadow: 0 4px 12px rgba(111, 66, 193, 0.15);">
-      <h2 style="font-size: 1.6em; color: #d6b3ff;">🧠 Deep Learner</h2>
-      <p style="color: #cccccc; margin-top: 10px;">I love learning deeply, especially in tech and AI topics.</p>
-    </div>
-
-    <div style="background-color: #1c1f26; padding: 20px; border-left: 6px solid #ffc107; border-radius: 12px; box-shadow: 0 4px 12px rgba(255, 193, 7, 0.15);">
-      <h2 style="font-size: 1.6em; color: #ffe066;">🔢 Abacus</h2>
-      <p style="color: #cccccc; margin-top: 10px;">Helps improve my mental arithmetic speed and accuracy.</p>
-    </div>
-
-  </div>
 </section>
 
+<section id="about">
 
-  <!-- Education Summary -->
-<section id="education-summary" style="padding: 40px; background-color: #0b0c10; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: white;">
-  <h1 style="font-size: 2.5em; font-weight: bold; color: #66ccff; margin-bottom: 30px;">My Education Journey</h1>
-  <div style="background-color: #1c1f26; padding: 24px; border-left: 6px solid #3399ff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 128, 255, 0.15);">
-    <h2 style="font-size: 1.6em; font-weight: bold; color: #66ccff; margin-bottom: 16px;">📘 Academic Background</h2>
-    <ul style="list-style-type: disc; padding-left: 20px; color: #cccccc; font-size: 1.1em; line-height: 1.6;">
-      <li><strong>Pre School to 9th Grade:</strong> New Bharath Higher Secondary School</li>
-      <li><strong>Higher Secondary (11th & 12th):</strong> New Bharath Higher Secondary School</li>
-      <li><strong>B.Tech in Biomedical Engineering:</strong> SRM Institute of Science and Technology</li>
-    </ul>
-    <p style="margin-top: 20px; font-style: italic; color: #999999; font-size: 0.95em;">Proud of every step in my academic journey — from roots to research.</p>
-  </div>
+<h2>About Me</h2>
+
+<p style="text-align:center;max-width:900px;margin:auto;line-height:1.8;">
+I am a Biomedical Engineering graduate passionate about combining healthcare
+technology with software development. I have developed projects including
+BMI Calculator, Biomaterials Notes, Elective Learning Portal, Certification Pages,
+and educational web applications.
+</p>
+
 </section>
 
-  <!-- Academic Performance -->
-<section id="academic-performance" style="padding: 40px; background-color: #0b0c10; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: white;">
-  <h1 style="font-size: 2.5em; font-weight: bold; color: #66ccff; margin-bottom: 30px;">My Academic Performance</h1>
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+<section id="skills">
 
-    <div style="background-color: #1c1f26; padding: 20px; border-left: 6px solid #3399ff; border-radius: 12px; box-shadow: 0 4px 12px rgba(51, 153, 255, 0.15);">
-      <h2 style="font-size: 1.4em; color: #66ccff;">11th Grade</h2>
-      <p style="color: #cccccc; margin-top: 10px;">Percentage: <strong>78.7%</strong></p>
-    </div>
+<h2>Skills</h2>
 
-    <div style="background-color: #1c1f26; padding: 20px; border-left: 6px solid #28a745; border-radius: 12px; box-shadow: 0 4px 12px rgba(40, 167, 69, 0.15);">
-      <h2 style="font-size: 1.4em; color: #66ffb3;">12th Grade</h2>
-      <p style="color: #cccccc; margin-top: 10px;">Percentage: <strong>80.2%</strong></p>
-    </div>
+<div class="skills">
 
-    <div style="background-color: #1c1f26; padding: 20px; border-left: 6px solid #6f42c1; border-radius: 12px; box-shadow: 0 4px 12px rgba(111, 66, 193, 0.15);">
-      <h2 style="font-size: 1.4em; color: #d6b3ff;">B.Tech - 1st Semester</h2>
-      <p style="color: #cccccc; margin-top: 10px;">SGPA: <strong>6.3</strong></p>
-    </div>
+<div class="skill">HTML5</div>
 
-    <div style="background-color: #1c1f26; padding: 20px; border-left: 6px solid #ffc107; border-radius: 12px; box-shadow: 0 4px 12px rgba(255, 193, 7, 0.15);">
-      <h2 style="font-size: 1.4em; color: #ffe066;">B.Tech - 2nd Semester</h2>
-      <p style="color: #cccccc; margin-top: 10px;">SGPA: <strong>5.8</strong></p>
-    </div>
+<div class="skill">CSS3</div>
 
-    <div style="background-color: #1c1f26; padding: 20px; border-left: 6px solid #dc3545; border-radius: 12px; box-shadow: 0 4px 12px rgba(220, 53, 69, 0.15);">
-      <h2 style="font-size: 1.4em; color: #ff6666;">B.Tech - 3rd Semester</h2>
-      <p style="color: #cccccc; margin-top: 10px;">SGPA: <strong>7.05</strong></p>
-    </div>
+<div class="skill">JavaScript</div>
 
-  </div>
+<div class="skill">Bootstrap</div>
+
+<div class="skill">Git & GitHub</div>
+
+<div class="skill">Biomedical Engineering</div>
+
+<div class="skill">Responsive Design</div>
+
+</div>
+
 </section>
 
+<section id="projects">
 
+<h2>Projects</h2>
 
-<!-- Certifications Section -->
-<section id="certifications" style="padding: 60px 20px; background-color: #0b0c10; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: white;">
-  <h2 style="font-size: 2.5em; font-weight: bold; color: #66ccff; margin-bottom: 30px; border-bottom: 2px solid #3399ff; padding-bottom: 10px; text-align: center;">
-    My Certifications
-  </h2>
-  <p style="font-size: 1.2em; color: #cccccc; margin-bottom: 40px; text-align: center;">
-    Workshops and programs I've participated in to enhance my academic and leadership experience.
-  </p>
+<div class="projects">
 
-  <!-- Grid Container -->
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px;">
+<div class="card">
 
-    <!-- Civil Workshop -->
-    <div style="background-color: #1c1f26; padding: 20px; border-left: 6px solid #3399ff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 128, 255, 0.15);">
-      <h3 style="font-size: 1.4em; color: #66ccff;">Civil Engineering Workshop</h3>
-      <p style="color: #cccccc; margin-top: 10px;">Participated in a hands-on civil engineering workshop focused on structural design and material analysis.</p>
-      <p style="color: #999999; font-size: 0.9em; margin-top: 10px;">Issued by: SRM Civil Department</p>
-      <a href="certificate-civil.pdf" target="_blank" style="display: inline-block; margin-top: 15px; padding: 8px 16px; background-color: #3399ff; color: white; text-decoration: none; border-radius: 6px; font-weight: bold;">
-        View Certificate
-      </a>
-    </div>
+<img src="bmi images.png">
 
-    <!-- Youth United Festival (YUF) -->
-    <div style="background-color: #1c1f26; padding: 20px; border-left: 6px solid #28a745; border-radius: 12px; box-shadow: 0 4px 12px rgba(40, 167, 69, 0.15);">
-      <h3 style="font-size: 1.4em; color: #66ffb3;">Youth United Festival (YUF)</h3>
-      <p style="color: #cccccc; margin-top: 10px;">Took part in cultural, technical, and leadership events celebrating student innovation and unity.</p>
-      <p style="color: #999999; font-size: 0.9em; margin-top: 10px;">Organized by: SRM University</p>
-      <a href="suriya.image.jpeg" target="_blank" style="display: inline-block; margin-top: 15px; padding: 8px 16px; background-color: #28a745; color: white; text-decoration: none; border-radius: 6px; font-weight: bold;">
-        View Certificate
-      </a>
-    </div>
+<div class="card-content">
 
-    <!-- Art of Research Publication -->
-    <div style="background-color: #1c1f26; padding: 20px; border-left: 6px solid #ffc107; border-radius: 12px; box-shadow: 0 4px 12px rgba(255, 193, 7, 0.15);">
-      <h3 style="font-size: 1.4em; color: #ffe066;">Art of Research Publication</h3>
-      <p style="color: #cccccc; margin-top: 10px;">Attended a workshop covering the fundamentals of academic writing, publishing techniques, and journal submission strategies.</p>
-      <p style="color: #999999; font-size: 0.9em; margin-top: 10px;">Hosted by: Department of Biomedical Engineering</p>
-      <a href="WhatsApp Image 2025-06-15 at 2.40.01 PM.jpeg" target="_blank" style="display: inline-block; margin-top: 15px; padding: 10px 16px; background-color: #ffc107; color: #1c1f26; text-decoration: none; font-weight: bold; border-radius: 8px;">
-        View Certificate
-      </a>
-    </div>
+<h3>BMI Calculator</h3>
 
-    <!-- Narcotic Control Bureau -->
-    <div style="background-color: #1c1f26; padding: 20px; border-left: 6px solid #ff4d4d; border-radius: 12px; box-shadow: 0 4px 12px rgba(255, 77, 77, 0.15);">
-      <h3 style="font-size: 1.4em; color: #ff9999;">Narcotic Control Bureau Program</h3>
-      <p style="color: #cccccc; margin-top: 10px;">Attended an awareness program on drug abuse prevention and youth responsibility conducted by the NCB.</p>
-      <p style="color: #999999; font-size: 0.9em; margin-top: 10px;">Organized by: Narcotic Control Bureau</p>
-      <a href="narco dev.jpeg" target="_blank" style="display: inline-block; margin-top: 15px; padding: 8px 16px; background-color: #ff4d4d; color: white; text-decoration: none; border-radius: 6px; font-weight: bold;">
-        View Certificate
-      </a>
-    </div>
+<p>Body Mass Index Calculator with educational content.</p>
 
-  </div>
+<a href="bmi-project.html">Open Project</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="bmi images (2).png">
+
+<div class="card-content">
+
+<h3>Biomaterials</h3>
+
+<p>Biomedical Engineering study material website.</p>
+
+<a href="biomaterials.html">Open Project</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="2nd.png.png">
+
+<div class="card-content">
+
+<h3>Elective Portal</h3>
+
+<p>Educational portal for Biomedical elective subjects.</p>
+
+<a href="elective.html">Open Project</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="4 th.png">
+
+<div class="card-content">
+
+<h3>BMI Questions</h3>
+
+<p>Question bank and practice portal.</p>
+
+<a href="bmi-question.html">Open Project</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="dev bmi . 1.jpeg">
+
+<div class="card-content">
+
+<h3>Certifications</h3>
+
+<p>My certifications and achievements.</p>
+
+<a href="certification.html">View Certificates</a>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<section id="projects" style="padding: 60px 20px; background-color: #0b0c10; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: white;">
-  <div class="max-w-6xl mx-auto">
-    <h2 style="font-size: 2.5em; font-weight: bold; color: #66ccff; margin-bottom: 30px; border-bottom: 2px solid #3399ff; padding-bottom: 10px; text-align: center;">
-      My Projects
-    </h2>
+<section id="contact">
 
-    <!-- Force 3 cards in a row -->
-    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+<h2>Contact</h2>
 
-      <!-- Project Card 1 -->
-      <div style="background-color: #1c1f26; padding: 20px; border-left: 6px solid #3399ff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 128, 255, 0.15);">
-        <h3 style="font-size: 1.4em; color: #66ccff;">Hydration and Temperature Detector</h3>
-        <p style="color: #cccccc; margin-top: 10px;">
-          A biomedical mini-project that monitors real-time body temperature and hydration levels using sensors integrated with the ESP32.
-        </p>
-        <a href="bmi-project.html" style="display: inline-block; margin-top: 12px; color: #66ccff; text-decoration: underline;">View Full Project →</a>
-      </div>
+<p style="text-align:center;line-height:2;">
 
-      <!-- Project Card 2 -->
-      <div style="background-color: #1c1f26; padding: 20px; border-left: 6px solid #28a745; border-radius: 12px; box-shadow: 0 4px 12px rgba(40, 167, 69, 0.15);">
-        <h3 style="font-size: 1.4em; color: #66ffb3;">Biomedical Instrumentation</h3>
-        <p style="color: #cccccc; margin-top: 10px;">
-          Cardiac pacemaker.
-        </p>
-        <a href="bmi-question.html" style="display: inline-block; margin-top: 12px; color: #66ffb3; text-decoration: underline;">View Full Project →</a>
-      </div>
+<strong>Email:</strong> your-email@example.com<br>
 
-      <!-- Project Card 3 -->
-      <div style="background-color: #1c1f26; padding: 20px; border-left: 6px solid #ffc107; border-radius: 12px; box-shadow: 0 4px 12px rgba(255, 193, 7, 0.15);">
-        <h3 style="font-size: 1.4em; color: #ffe066;">Biomaterials</h3>
-        <p style="color: #cccccc; margin-top: 10px;">
-          Hand of reflection action.
-        </p>
-        <a href="biomaterials.html" style="display: inline-block; margin-top: 12px; color: #ffe066; text-decoration: underline;">View Full Project →</a>
-      </div>
+<strong>GitHub:</strong>
 
-    </div>
-  </div>
+<a href="https://github.com/deva0017" target="_blank">
+github.com/deva0017
+</a>
+
+</p>
+
 </section>
-<section id="projects" style="padding: 60px 20px; background-color: #0b0c10; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: white;">
-  <div class="max-w-6xl mx-auto">
-    <h2 style="font-size: 2.5em; font-weight: bold; color: #66ccff; margin-bottom: 30px; border-bottom: 2px solid #3399ff; padding-bottom: 10px; text-align: center;">
-     learning -- Clean and green energy
-    </h2>
-    <!-- Title 1 -->
-      <div style="background-color: #1c1f26; padding: 20px; border-left: 6px solid #3399ff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 128, 255, 0.15);">
-        <h3 style="font-size: 1.4em; color: #66ccff;">Tidal power plant</h3>
-        <p style="color: #cccccc; margin-top: 10px;">
-         	Prepare the architecture of a tidal power plant suitable for a coastal village
-        </p>
-        <a href="elective 1.html" style="display: inline-block; margin-top: 12px; color: #66ccff; text-decoration: underline;">View →</a>
-      </div>
- <!-- Title 2 -->
-      <div style="background-color: #1c1f26; padding: 20px; border-left: 6px solid #3399ff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 128, 255, 0.15);">
-        <h3 style="font-size: 1.4em; color: #66ccff;">solar power irrigation</h3>
-        <p style="color: #cccccc; margin-top: 10px;">
-         	Design a solar-powered irrigation pumping system for agriculture in an off-grid area.
-        </p>
-        <a href="elective.html" style="display: inline-block; margin-top: 12px; color: #66ccff; text-decoration: underline;">View →</a>
-      </div>
+
+<footer>
+
+<p>© 2026 Deva Ganesh | Portfolio</p>
+
+</footer>
+
 </body>
 </html>
