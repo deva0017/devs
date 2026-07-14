@@ -1,188 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deva Ganesh | Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deva Ganesh | Portfolio</title>
 
-    <link rel="stylesheet" href="style.css">
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+    scroll-behavior:smooth;
+}
 
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:Arial,Helvetica,sans-serif;
-        }
+body{
+    background:#f4f6f9;
+    color:#333;
+}
 
-        body{
-            background:#f4f6f9;
-            color:#333;
-        }
+header{
+    width:100%;
+    background:#0d6efd;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 60px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 10px rgba(0,0,0,.2);
+}
 
-        header{
-            background:#0d6efd;
-            color:white;
-            padding:15px 40px;
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            position:sticky;
-            top:0;
-        }
+header h2{
+    font-size:28px;
+}
 
-        header h2{
-            letter-spacing:1px;
-        }
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    font-weight:bold;
+    transition:.3s;
+}
 
-        nav a{
-            color:white;
-            text-decoration:none;
-            margin-left:20px;
-            font-weight:bold;
-        }
+nav a:hover{
+    color:#ffd43b;
+}
 
-        nav a:hover{
-            color:yellow;
-        }
+.hero{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:70px;
+    flex-wrap:wrap;
+    padding:80px 30px;
+    background:white;
+}
 
-        .hero{
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            flex-wrap:wrap;
-            padding:70px 30px;
-            background:white;
-        }
+.hero img{
+    width:300px;
+    height:300px;
+    object-fit:cover;
+    border-radius:50%;
+    border:8px solid #0d6efd;
+    box-shadow:0 15px 30px rgba(0,0,0,.2);
+    transition:.4s;
+}
 
-        .hero img{
-            width:260px;
-            border-radius:50%;
-            border:5px solid #0d6efd;
-            margin:20px;
-        }
+.hero img:hover{
+    transform:scale(1.05);
+}
 
-        .hero-text{
-            max-width:600px;
-            margin:20px;
-        }
+.hero-text{
+    max-width:600px;
+}
 
-        .hero-text h1{
-            font-size:45px;
-            color:#0d6efd;
-        }
+.hero-text h1{
+    font-size:55px;
+    color:#0d6efd;
+}
 
-        .hero-text h3{
-            margin:15px 0;
-            color:#555;
-        }
+.hero-text h3{
+    margin:15px 0;
+    color:#555;
+}
 
-        .hero-text p{
-            line-height:1.7;
-        }
+.hero-text p{
+    line-height:1.8;
+    margin-top:15px;
+    font-size:18px;
+}
 
-        .btn{
-            display:inline-block;
-            margin-top:20px;
-            background:#0d6efd;
-            color:white;
-            text-decoration:none;
-            padding:12px 25px;
-            border-radius:5px;
-        }
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    background:#0d6efd;
+    color:white;
+    padding:14px 30px;
+    text-decoration:none;
+    border-radius:8px;
+    transition:.3s;
+}
 
-        section{
-            padding:60px 40px;
-        }
+.btn:hover{
+    background:#084ec1;
+}
 
-        h2{
-            text-align:center;
-            color:#0d6efd;
-            margin-bottom:30px;
-        }
+section{
+    padding:70px 60px;
+}
 
-        .skills{
-            display:flex;
-            justify-content:center;
-            flex-wrap:wrap;
-            gap:15px;
-        }
+h2{
+    text-align:center;
+    color:#0d6efd;
+    font-size:38px;
+    margin-bottom:40px;
+}
 
-        .skill{
-            background:white;
-            padding:15px 25px;
-            border-radius:8px;
-            box-shadow:0 0 10px rgba(0,0,0,.1);
-        }
+@media(max-width:768px){
 
-        .projects{
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-            gap:20px;
-        }
+header{
+    flex-direction:column;
+    padding:20px;
+}
 
-        .card{
-            background:white;
-            border-radius:10px;
-            overflow:hidden;
-            box-shadow:0 0 10px rgba(0,0,0,.1);
-            transition:.3s;
-        }
+nav{
+    margin-top:15px;
+}
 
-        .card:hover{
-            transform:translateY(-8px);
-        }
+nav a{
+    display:inline-block;
+    margin:8px;
+}
 
-        .card img{
-            width:100%;
-            height:200px;
-            object-fit:cover;
-        }
+.hero{
+    text-align:center;
+}
 
-        .card-content{
-            padding:20px;
-        }
+.hero img{
+    width:230px;
+    height:230px;
+}
 
-        .card-content h3{
-            color:#0d6efd;
-        }
+.hero-text h1{
+    font-size:40px;
+}
 
-        .card-content p{
-            margin:10px 0;
-        }
-
-        .card-content a{
-            text-decoration:none;
-            color:white;
-            background:#0d6efd;
-            padding:10px 18px;
-            display:inline-block;
-            border-radius:5px;
-        }
-
-        footer{
-            background:#0d6efd;
-            color:white;
-            text-align:center;
-            padding:20px;
-        }
-
-        @media(max-width:768px){
-            .hero{
-                text-align:center;
-            }
-
-            header{
-                flex-direction:column;
-            }
-
-            nav{
-                margin-top:10px;
-            }
-        }
-    </style>
+}
+</style>
 
 </head>
+
 <body>
 
 <header>
@@ -200,7 +170,7 @@
 
 <section class="hero">
 
-<img src="deva.picu.jpeg" alt="Profile">
+<img src="WhatsApp Image 2025-05-03 at 2.54.45 PM.jpeg" alt="Deva Ganesh">
 
 <div class="hero-text">
 
@@ -209,167 +179,14 @@
 <h3>Biomedical Engineer | Web Developer</h3>
 
 <p>
-Passionate Biomedical Engineering professional with an interest in Web Development,
-Educational Websites and Biomedical Technologies. I enjoy creating responsive
-web applications and academic resources for students.
+Passionate Biomedical Engineering student with a strong interest in
+Web Development, Biomedical Technologies, IoT, and AI.
+I enjoy building modern websites, educational portals,
+and healthcare-based innovative projects.
 </p>
 
-<a href="#projects" class="btn">View Projects</a>
+<a href="#projects" class="btn">View My Projects</a>
 
 </div>
 
 </section>
-
-<section id="about">
-
-<h2>About Me</h2>
-
-<p style="text-align:center;max-width:900px;margin:auto;line-height:1.8;">
-I am a Biomedical Engineering graduate passionate about combining healthcare
-technology with software development. I have developed projects including
-BMI Calculator, Biomaterials Notes, Elective Learning Portal, Certification Pages,
-and educational web applications.
-</p>
-
-</section>
-
-<section id="skills">
-
-<h2>Skills</h2>
-
-<div class="skills">
-
-<div class="skill">HTML5</div>
-
-<div class="skill">CSS3</div>
-
-<div class="skill">JavaScript</div>
-
-<div class="skill">Bootstrap</div>
-
-<div class="skill">Git & GitHub</div>
-
-<div class="skill">Biomedical Engineering</div>
-
-<div class="skill">Responsive Design</div>
-
-</div>
-
-</section>
-
-<section id="projects">
-
-<h2>Projects</h2>
-
-<div class="projects">
-
-<div class="card">
-
-<img src="bmi images.png">
-
-<div class="card-content">
-
-<h3>BMI Calculator</h3>
-
-<p>Body Mass Index Calculator with educational content.</p>
-
-<a href="bmi-project.html">Open Project</a>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<img src="bmi images (2).png">
-
-<div class="card-content">
-
-<h3>Biomaterials</h3>
-
-<p>Biomedical Engineering study material website.</p>
-
-<a href="biomaterials.html">Open Project</a>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<img src="2nd.png.png">
-
-<div class="card-content">
-
-<h3>Elective Portal</h3>
-
-<p>Educational portal for Biomedical elective subjects.</p>
-
-<a href="elective.html">Open Project</a>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<img src="4 th.png">
-
-<div class="card-content">
-
-<h3>BMI Questions</h3>
-
-<p>Question bank and practice portal.</p>
-
-<a href="bmi-question.html">Open Project</a>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<img src="dev bmi . 1.jpeg">
-
-<div class="card-content">
-
-<h3>Certifications</h3>
-
-<p>My certifications and achievements.</p>
-
-<a href="certification.html">View Certificates</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="contact">
-
-<h2>Contact</h2>
-
-<p style="text-align:center;line-height:2;">
-
-<strong>Email:</strong> your-email@example.com<br>
-
-<strong>GitHub:</strong>
-
-<a href="https://github.com/deva0017" target="_blank">
-github.com/deva0017
-</a>
-
-</p>
-
-</section>
-
-<footer>
-
-<p>© 2026 Deva Ganesh | Portfolio</p>
-
-</footer>
-
-</body>
-</html>
