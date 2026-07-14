@@ -1,191 +1,716 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Deva Ganesh | Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deva Ganesh | Portfolio</title>
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,Helvetica,sans-serif;
-    scroll-behavior:smooth;
-}
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
-body{
-    background:#f4f6f9;
-    color:#333;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            font-family: 'Poppins', sans-serif;
+        }
 
-header{
-    width:100%;
-    background:#0d6efd;
-    color:white;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:18px 60px;
-    position:sticky;
-    top:0;
-    z-index:1000;
-    box-shadow:0 3px 10px rgba(0,0,0,.2);
-}
+        body {
+            background: #0f172a;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
 
-header h2{
-    font-size:28px;
-}
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:25px;
-    font-weight:bold;
-    transition:.3s;
-}
+        ::-webkit-scrollbar-thumb {
+            background: #2563eb;
+            border-radius: 20px;
+        }
 
-nav a:hover{
-    color:#ffd43b;
-}
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
 
-.hero{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:70px;
-    flex-wrap:wrap;
-    padding:80px 30px;
-    background:white;
-}
+        /* Header */
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, .4);
+        }
 
-.hero img{
-    width:300px;
-    height:300px;
-    object-fit:cover;
-    border-radius:50%;
-    border:8px solid #0d6efd;
-    box-shadow:0 15px 30px rgba(0,0,0,.2);
-    transition:.4s;
-}
+        .logo {
+            font-size: 30px;
+            font-weight: 700;
+            color: white;
+        }
 
-.hero img:hover{
-    transform:scale(1.05);
-}
+        .logo span {
+            color: #3b82f6;
+        }
 
-.hero-text{
-    max-width:600px;
-}
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 35px;
+            font-size: 17px;
+            font-weight: 500;
+            transition: .3s;
+            position: relative;
+        }
 
-.hero-text h1{
-    font-size:55px;
-    color:#0d6efd;
-}
+        nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 0;
+            height: 2px;
+            background: #3b82f6;
+            transition: .3s;
+        }
 
-.hero-text h3{
-    margin:15px 0;
-    color:#555;
-}
+        nav a:hover {
+            color: #3b82f6;
+        }
 
-.hero-text p{
-    line-height:1.8;
-    margin-top:15px;
-    font-size:18px;
-}
+        nav a:hover::after {
+            width: 100%;
+        }
 
-.btn{
-    display:inline-block;
-    margin-top:30px;
-    background:#0d6efd;
-    color:white;
-    padding:14px 30px;
-    text-decoration:none;
-    border-radius:8px;
-    transition:.3s;
-}
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 80px;
+            padding: 120px 8%;
+            flex-wrap: wrap;
+        }
 
-.btn:hover{
-    background:#084ec1;
-}
+        /* Profile Image */
+        .hero img {
+            width: 330px;
+            height: 330px;
+            object-fit: cover;
+            border-radius: 50%;
+            background: white;
+            padding: 8px;
+            border: 5px solid #000;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, .45);
+            transition: .4s;
+        }
 
-section{
-    padding:70px 60px;
-}
+        .hero img:hover {
+            transform: scale(1.05);
+        }
 
-h2{
-    text-align:center;
-    color:#0d6efd;
-    font-size:38px;
-    margin-bottom:40px;
-}
+        /* Hero Text */
+        .hero-text {
+            max-width: 620px;
+        }
 
-@media(max-width:768px){
+        .hero-text h1 {
+            font-size: 58px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
 
-header{
-    flex-direction:column;
-    padding:20px;
-}
+        .hero-text h1 span {
+            color: #3b82f6;
+        }
 
-nav{
-    margin-top:15px;
-}
+        .hero-text h3 {
+            color: #60a5fa;
+            margin: 18px 0;
+            font-size: 28px;
+        }
 
-nav a{
-    display:inline-block;
-    margin:8px;
-}
+        .hero-text p {
+            color: #cbd5e1;
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
 
-.hero{
-    text-align:center;
-}
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            padding: 15px 35px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: .3s;
+            margin-right: 15px;
+        }
 
-.hero img{
-    width:230px;
-    height:230px;
-}
+        .btn:hover {
+            background: #1d4ed8;
+            transform: translateY(-3px);
+        }
 
-.hero-text h1{
-    font-size:40px;
-}
+        .btn-outline {
+            display: inline-block;
+            padding: 15px 35px;
+            border: 2px solid #3b82f6;
+            color: #3b82f6;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: .3s;
+        }
 
-}
-</style>
+        .btn-outline:hover {
+            background: #3b82f6;
+            color: white;
+        }
 
+        /* Responsive */
+        @media(max-width:900px) {
+
+            header {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            nav {
+                margin-top: 15px;
+            }
+
+            nav a {
+                margin: 10px;
+            }
+
+            .hero {
+                text-align: center;
+                gap: 40px;
+            }
+
+            .hero img {
+                width: 250px;
+                height: 250px;
+            }
+
+            .hero-text h1 {
+                font-size: 42px;
+            }
+
+            .hero-text h3 {
+                font-size: 22px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
+    <header>
 
-<h2>Deva Ganesh</h2>
+        <div class="logo">
+            Deva <span>Ganesh</span>
+        </div>
 
-<nav>
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
-</nav>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
 
-</header>
-<section class="hero">
+    </header>
 
-    <img src="WhatsApp Image 2025-05-03 at 2.54.45 PM.jpeg" alt="Deva Ganesh">
+    <section class="hero">
 
-    <div class="hero-text">
+        <img src="WhatsApp Image 2025-05-03 at 2.54.45 PM.jpeg" alt="Deva Ganesh">
 
-        <h1>Deva Ganesh</h1>
+        <div class="hero-text">
 
-        <h3>Biomedical Engineer | Web Developer</h3>
+            <h1>Hi, I'm <span>Deva Ganesh</span></h1>
 
-        <p>
-            Passionate Biomedical Engineering student with a strong interest in
-            Web Development, Biomedical Technologies, IoT, Artificial Intelligence,
-            and Software Development. I enjoy creating modern websites,
-            educational portals, and innovative healthcare solutions.
-        </p>
+            <h3>Biomedical Engineer | Web Developer</h3>
 
-        <a href="#projects" class="btn">View My Projects</a>
+            <p>
+                Passionate Biomedical Engineering student with interests in
+                Web Development, Artificial Intelligence, IoT, and Healthcare
+                Technology. I build responsive websites and innovative
+                biomedical solutions that combine technology with real-world
+                healthcare applications.
+            </p>
+
+            <a href="#projects" class="btn">View Projects</a>
+
+            <a href="#" class="btn-outline">Download Resume</a>
+
+        </div>
+
+    </section>
+    <!-- ================= ABOUT SECTION ================= -->
+
+<section id="about">
+
+    <div class="section-title">
+        <h2>About Me</h2>
+        <p>Know more about me</p>
+    </div>
+
+    <div class="about-container">
+
+        <div class="about-image">
+            <img src="WhatsApp Image 2025-05-03 at 2.54.45 PM.jpeg" alt="Deva Ganesh">
+        </div>
+
+        <div class="about-content">
+
+            <h3>Biomedical Engineer & Web Developer</h3>
+
+            <p>
+                I am a Biomedical Engineering student passionate about creating
+                innovative healthcare technologies and modern web applications.
+                My interests include Artificial Intelligence, Internet of Things (IoT),
+                Medical Image Processing, Biomedical Instrumentation,
+                and Full Stack Web Development.
+            </p>
+
+            <p>
+                I enjoy designing responsive websites, educational platforms,
+                and healthcare-based software solutions that combine engineering
+                knowledge with modern technology.
+            </p>
+
+            <div class="about-info">
+
+                <div class="info-card">
+                    <h4>Name</h4>
+                    <p>Deva Ganesh</p>
+                </div>
+
+                <div class="info-card">
+                    <h4>Degree</h4>
+                    <p>B.E Biomedical Engineering</p>
+                </div>
+
+                <div class="info-card">
+                    <h4>University</h4>
+                    <p>SRM Institute of Science and Technology</p>
+                </div>
+
+                <div class="info-card">
+                    <h4>Location</h4>
+                    <p>Tamil Nadu, India</p>
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
 
 </section>
+
+<!-- ================= EDUCATION SECTION ================= -->
+
+<section id="education">
+
+    <div class="section-title">
+
+        <h2>Education</h2>
+
+        <p>Academic Journey</p>
+
+    </div>
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+
+                <h3>B.E Biomedical Engineering</h3>
+
+                <span>2023 - Present</span>
+
+                <p>
+                    SRM Institute of Science and Technology,
+                    Kattankulathur, Chennai.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+
+                <h3>Higher Secondary Education</h3>
+
+                <span>2021 - 2023</span>
+
+                <p>
+                    Completed Higher Secondary with Biology,
+                    Physics, Chemistry and Mathematics.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+
+                <h3>Secondary School</h3>
+
+                <span>2020 - 2021</span>
+
+                <p>
+                    Successfully completed SSLC with excellent academic performance.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ================= SKILLS SECTION ================= -->
+
+<section id="skills">
+
+    <div class="section-title">
+        <h2>My Skills</h2>
+        <p>Technical Skills & Expertise</p>
+    </div>
+
+    <div class="skills-container">
+
+        <div class="skill-box">
+            <h3>HTML</h3>
+            <div class="progress">
+                <span style="width:95%;"></span>
+            </div>
+        </div>
+
+        <div class="skill-box">
+            <h3>CSS</h3>
+            <div class="progress">
+                <span style="width:90%;"></span>
+            </div>
+        </div>
+
+        <div class="skill-box">
+            <h3>JavaScript</h3>
+            <div class="progress">
+                <span style="width:75%;"></span>
+            </div>
+        </div>
+
+        <div class="skill-box">
+            <h3>Python</h3>
+            <div class="progress">
+                <span style="width:85%;"></span>
+            </div>
+        </div>
+
+        <div class="skill-box">
+            <h3>Git & GitHub</h3>
+            <div class="progress">
+                <span style="width:80%;"></span>
+            </div>
+        </div>
+
+        <div class="skill-box">
+            <h3>Biomedical Engineering</h3>
+            <div class="progress">
+                <span style="width:92%;"></span>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= CERTIFICATIONS ================= -->
+
+<section id="certifications">
+
+    <div class="section-title">
+        <h2>Certifications</h2>
+        <p>Courses & Achievements</p>
+    </div>
+
+    <div class="certificate-grid">
+
+        <div class="certificate-card">
+            <h3>Web Development</h3>
+            <p>Completed HTML, CSS and JavaScript certification.</p>
+        </div>
+
+        <div class="certificate-card">
+            <h3>Python Programming</h3>
+            <p>Completed Python Programming and problem solving certification.</p>
+        </div>
+
+        <div class="certificate-card">
+            <h3>Biomedical Engineering</h3>
+            <p>Workshops and technical certifications in Biomedical Engineering.</p>
+        </div>
+
+        <div class="certificate-card">
+            <h3>IoT & AI</h3>
+            <p>Hands-on projects in Internet of Things and Artificial Intelligence.</p>
+        </div>
+
+    </div>
+
+</section>
+<!-- ================= PROJECTS SECTION ================= -->
+
+<section id="projects">
+
+    <div class="section-title">
+        <h2>Projects</h2>
+        <p>Some of my recent work</p>
+    </div>
+
+    <div class="projects-container">
+
+        <div class="project-card">
+
+            <img src="WhatsApp Image 2025-05-03 at 2.54.45 PM.jpeg" alt="Clubfoot Project">
+
+            <div class="project-content">
+
+                <h3>IoT Smart Clubfoot Brace</h3>
+
+                <p>
+                    Smart IoT-enabled clubfoot brace using pressure sensors,
+                    IMU sensors and ESP32 for monitoring patient compliance.
+                </p>
+
+                <div class="project-buttons">
+
+                    <a href="#" class="btn">View Project</a>
+
+                    <a href="https://github.com/deva0017" target="_blank" class="btn-outline">
+                        GitHub
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="project-card">
+
+            <img src="2nd.png.png" alt="Elective Portal">
+
+            <div class="project-content">
+
+                <h3>Biomedical Elective Portal</h3>
+
+                <p>
+                    Educational website developed for Biomedical Engineering
+                    students with notes, resources and learning materials.
+                </p>
+
+                <div class="project-buttons">
+
+                    <a href="#" class="btn">View Project</a>
+
+                    <a href="https://github.com/deva0017" target="_blank" class="btn-outline">
+                        GitHub
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="project-card">
+
+            <img src="4 th.png" alt="BMI Project">
+
+            <div class="project-content">
+
+                <h3>BMI Calculator Website</h3>
+
+                <p>
+                    Responsive BMI Calculator developed using HTML, CSS and
+                    JavaScript with educational healthcare content.
+                </p>
+
+                <div class="project-buttons">
+
+                    <a href="#" class="btn">View Project</a>
+
+                    <a href="https://github.com/deva0017" target="_blank" class="btn-outline">
+                        GitHub
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= ACHIEVEMENTS ================= -->
+
+<section id="achievements">
+
+    <div class="section-title">
+        <h2>Achievements</h2>
+        <p>Learning Journey</p>
+    </div>
+
+    <div class="achievement-grid">
+
+        <div class="achievement-card">
+            <h3>Web Development</h3>
+            <p>Developed multiple responsive portfolio and educational websites.</p>
+        </div>
+
+        <div class="achievement-card">
+            <h3>Biomedical Projects</h3>
+            <p>Designed innovative healthcare and IoT-based biomedical solutions.</p>
+        </div>
+
+        <div class="achievement-card">
+            <h3>GitHub</h3>
+            <p>Published academic and web development projects on GitHub.</p>
+        </div>
+
+        <div class="achievement-card">
+            <h3>Continuous Learning</h3>
+            <p>Actively learning AI, IoT, Full Stack Development and Biomedical Technologies.</p>
+        </div>
+
+    </div>
+
+</section>
+<!-- ================= CONTACT ================= -->
+
+<section id="contact">
+
+    <div class="section-title">
+        <h2>Contact Me</h2>
+        <p>Let's Connect</p>
+    </div>
+
+    <div class="contact-container">
+
+        <div class="contact-info">
+
+            <h3>Get In Touch</h3>
+
+            <p>
+                I'm always interested in internships, biomedical engineering
+                projects, web development opportunities, and collaborations.
+            </p>
+
+            <div class="contact-item">
+                <strong>Email</strong><br>
+                your-email@example.com
+            </div>
+
+            <div class="contact-item">
+                <strong>Phone</strong><br>
+                +91 XXXXX XXXXX
+            </div>
+
+            <div class="contact-item">
+                <strong>Location</strong><br>
+                Chennai, Tamil Nadu, India
+            </div>
+
+            <div class="social-links">
+
+                <a href="https://github.com/deva0017" target="_blank">GitHub</a>
+
+                <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+
+            </div>
+
+        </div>
+
+        <div class="contact-form">
+
+            <form>
+
+                <input type="text" placeholder="Your Name" required>
+
+                <input type="email" placeholder="Your Email" required>
+
+                <input type="text" placeholder="Subject">
+
+                <textarea rows="6" placeholder="Your Message"></textarea>
+
+                <button type="submit" class="btn">
+                    Send Message
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <h2>Deva Ganesh</h2>
+
+    <p>
+        Biomedical Engineer • Web Developer • IoT Enthusiast
+    </p>
+
+    <p class="copyright">
+        © 2026 Deva Ganesh. All Rights Reserved.
+    </p>
+
+</footer>
+
+<!-- Back to Top Button -->
+
+<a href="#" class="top-btn">
+    ↑
+</a>
+
+</body>
+</html>
