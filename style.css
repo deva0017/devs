@@ -299,9 +299,8 @@ nav ul li a:hover::after{
 }
 
 .about-container{
-
-    display:grid;
-    grid-template-columns:350px 1fr;
+    display:block;
+}
     gap:70px;
     align-items:center;
 
